@@ -1,174 +1,172 @@
-import { GradientWaveBottom, GradientWaveTop } from '../../assets/GradientWave';
+import type React from 'react';
+import ImagePlaceholder from '../../assets/ImagePlaceholder';
+import SectionListBlockItem from '../../components/content/SectionListBlockItem';
+import {
+	CardContainer,
+	ContainerHeader,
+	DetailItem,
+	HighlightItem,
+	CTAButton,
+	DateBadge,
+	WarningBox,
+	PageHeader,
+	BorderContainer,
+} from '../../components/content/ContentComponents';
 
-export default function PreparingForSchool() {
-	const buttonClass =
-		'mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out';
+const PreparingForSchool: React.FC = () => {
 	return (
-		<div className="leading-normal tracking-normal text-white gradient">
-			<div>
-				<div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
-					<div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
-						<h1 className="my-4 text-5xl font-bold leading-tight">
-							Main Hero Message to sell yourself!
-						</h1>
-						<p className="leading-normal text-2xl mb-8">
-							Sub-hero message, not too long and not too short. Make it just
-							right!
-						</p>
-						<button className={buttonClass}>Subscribe</button>
-					</div>
-					<div className="w-full md:w-3/5 py-6 text-center">
-						<img className="w-full md:w-4/5 z-50" src="hero.png" />
-					</div>
+		<div className="min-h-screen gradient">
+			<div className="flex flex-col justify-center items-center gap-y-10 py-12">
+				{/* Header */}
+				<div className="mb-6">
+					<PageHeader
+						title={`🏫 Концепція 1 класу та підготовка`}
+						description="Освітня модель та цілі"
+					/>
 				</div>
-			</div>
-			<div className="relative -mt-12 lg:-mt-24">
-				<GradientWaveTop />
-			</div>
-			<section className="bg-white  py-8">
-				<div className="container max-w-5xl mx-auto m-8">
-					<h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-						Title
-					</h2>
-					<div className="w-full mb-4">
-						<div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
-					</div>
-					<div className="flex flex-wrap">
-						<div className="w-5/6 sm:w-1/2 p-6">
-							<h3 className="text-3xl text-gray-800 font-bold leading-none mb-3">
-								Lorem ipsum dolor sit amet
-							</h3>
-							<p className="text-gray-600 mb-8">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-								Aliquam at ipsum eu nunc commodo posuere et sit amet
-								ligula.
+
+				<div className="flex flex-col justify-center gap-y-5 w-9/10 mx-auto">
+					<CardContainer>
+						<ContainerHeader title={`Концепція 1 класу`} icon={'📚'} />
+
+						<ImagePlaceholder color="bg-purple-500" />
+
+						<BorderContainer>
+							<h2 className="font-bold text-gray-800 text-lg sm:text-xl mb-2 flex items-center">
+								Освітня модель та цілі:
+							</h2>
+							<p className="sm:text-lg">
+								Освітня модель, заснована на International Baccalaureate -
+								Primary Years Programme (PYP)
 							</p>
+							<HighlightItem icon="✅">
+								Підтримка дитини в її новій соціальній ролі — учня:
+								розвиток самостійності, відповідальності за навчання та
+								взаємини з іншими
+							</HighlightItem>
+							<HighlightItem icon="✅">
+								Закладення основ самоорганізації, ефективної комунікації,
+								навчання
+							</HighlightItem>
+							<HighlightItem icon="✅">
+								Компетентнісна модель, яка включає державні освітні
+								стандарти, але глибша та ширша за них
+							</HighlightItem>
+						</BorderContainer>
+
+						<div className="space-y-4 my-6">
+							<SectionListBlockItem
+								block
+								title="Приблизний щоденний розклад:"
+								dataList={[
+									'🕗 08:00–08:30 — Зустріч дітей',
+									'🕣 08:30–08:50 — Ранкова зустріч',
+									'🕘 09:00–11:25 — Академічний блок: болгарська, англійська, соціальні та природничі науки, міждисциплінарні проєкти',
+									'🕚 11:25–12:30 — Обід, вільна гра',
+									'🕧 12:30–12:45 — Відпочинок на свіжому повітрі',
+									'🕒 13:45–16:00 — Післяобідній блок: розвиток, мистецтва, самостійне навчання, полуденок',
+									'🕓 16:00–18:00 — Додаткові активності, вільна гра, зустріч батьків',
+								]}
+							/>
 						</div>
-						<div className="w-full sm:w-1/2 p-6">
-							<div className="bg-red-500 w-100 h-70">
-								{/* МЕСТО ПОД КАРТИНКУ 1 */}
-							</div>
+						<div className="w-full">
+							<h2 className="text-3xl sm:text-4xl text-center lg:text-start font-bold text-gray-800 ">
+								Місячні та річні активності:
+							</h2>
+							<SectionListBlockItem
+								block
+								title="📆 Щомісячно:"
+								dataList={['Навчання на природі', 'Культурні враження']}
+							/>
+							<SectionListBlockItem
+								block
+								title="📅 Протягом року:"
+								dataList={[
+									'Вступна програма (перші 6 тижнів)',
+									'Виїзди на природу (до 2 разів на рік)',
+									'Тристороння зустріч учень–учитель–батьки (вступна, фінальна)',
+									'Зустрічі вчитель–батьки (3 рази на рік або за запитом)',
+									'Звіти про досягнення дитини (2 рази на рік)',
+									'Батьківські збори (2 рази на рік)',
+									'Підсумкова діагностика (кінець травня)',
+									'Літня програма-Тібір “Альфа” в м.Софія (все літо) / Відпочинок на морі-табір ”Разом” м.Кітен (заїзд)',
+								]}
+							/>
 						</div>
-					</div>
-					<div className="flex flex-wrap flex-col-reverse sm:flex-row">
-						<div className="w-full sm:w-1/2 p-6 mt-6">
-							<div className="bg-green-500 w-100 h-70">
-								{/* МЕСТО ПОД КАРТИНКУ 2 */}
-							</div>
+					</CardContainer>
+
+					<CardContainer>
+						<ContainerHeader
+							title={`Готуємося до 1 класу разом зі школою "Альфа"!`}
+							icon={'🎒'}
+						/>
+
+						<ImagePlaceholder color="bg-sky-500" />
+
+						<DetailItem icon="👶">
+							Якщо ваша дитина восени йде до школи — саме час зробити цей
+							перехід м’яким, радісним і натхненним!
+						</DetailItem>
+
+						<SectionListBlockItem
+							block
+							title="Міжнародна інноваційна школа «Альфа» відкриває підготовчі програми до 1 класу:"
+							dataList={[
+								'За українською програмою НУШ',
+								'За болгарською освітньою моделлю, яка базується на міжнародному стандарті IB PYP (Primary Years Programme)',
+							]}
+						/>
+
+						<BorderContainer>
+							<h2 className="font-bold text-gray-800 text-lg sm:text-xl mb-2 flex items-center">
+								💼 Що отримає ваша дитина?
+							</h2>
+							<HighlightItem icon="✅">
+								Розвиток навичок самостійності та відповідальності
+							</HighlightItem>
+							<HighlightItem icon="✅">
+								Навчання через гру, проєкти та дослідження
+							</HighlightItem>
+							<HighlightItem icon="✅">
+								Грамотність, математика, англійська, болгарська — легко та
+								цікаво
+							</HighlightItem>
+							<HighlightItem icon="✅">
+								Розвиток soft skills: комунікація, самопізнання, емоційний
+								інтелект
+							</HighlightItem>
+							<HighlightItem icon="✅">
+								Адаптація до ритму шкільного життя через денні ритуали,
+								мистецтво, спорт і багато позитивних вражень!
+							</HighlightItem>
+						</BorderContainer>
+						<DateBadge data="Старт програм — травень/червень 2025" />
+
+						<div className="space-y-4 mb-6">
+							<DetailItem icon="🕘">
+								Зручний графік для дітей і батьків
+							</DetailItem>
+							<DetailItem icon="📍">
+								Навчання: в гр. София, бул. „Сливница“ № 188, вход „Б“,
+								етаж 2 (район Метростанция Лъвов мост)
+							</DetailItem>
+							<DetailItem icon="📜">
+								Після підготовки — можливість вступу до 1 класу школи
+								«Альфа» (UA або BG)
+							</DetailItem>
 						</div>
-						<div className="w-full sm:w-1/2 p-6 mt-6">
-							<div className="align-middle">
-								<h3 className="text-3xl text-gray-800 font-bold leading-none mb-3">
-									Lorem ipsum dolor sit amet
-								</h3>
-								<p className="text-gray-600 mb-8">
-									Lorem ipsum dolor sit amet, consectetur adipiscing
-									elit. Aliquam at ipsum eu nunc commodo posuere et sit
-									amet ligula.
-								</p>
-							</div>
-						</div>
-					</div>
+						<WarningBox>
+							📲 Залиште заявку вже зараз, щоб ми могли підібрати для вас
+							найкращу програму:
+						</WarningBox>
+						<CTAButton href="https://forms.gle/Jt7MnnMufD1fjHVb6">
+							Залишити заявку
+						</CTAButton>
+					</CardContainer>
 				</div>
-			</section>
-			<section className="bg-white  py-8">
-				<div className="container mx-auto flex flex-wrap pt-4 pb-12">
-					<h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-						Title
-					</h2>
-					<div className="w-full mb-4">
-						<div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
-					</div>
-					<div className="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-						<div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-							<a
-								href="#"
-								className="flex flex-wrap no-underline hover:no-underline"
-							>
-								<p className="w-full text-gray-600 text-xs md:text-sm px-6">
-									xGETTING STARTED
-								</p>
-								<div className="w-full font-bold text-xl text-gray-800 px-6">
-									Lorem ipsum dolor sit amet.
-								</div>
-								<p className="text-gray-800 text-base px-6 mb-5">
-									Lorem ipsum dolor sit amet, consectetur adipiscing
-									elit. Aliquam at ipsum eu nunc commodo posuere et sit
-									amet ligula.
-								</p>
-							</a>
-						</div>
-						<div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-							<div className="flex items-center justify-start">
-								<button className={buttonClass}>Action</button>
-							</div>
-						</div>
-					</div>
-					<div className="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-						<div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-							<a
-								href="#"
-								className="flex flex-wrap no-underline hover:no-underline"
-							>
-								<p className="w-full text-gray-600 text-xs md:text-sm px-6">
-									xGETTING STARTED
-								</p>
-								<div className="w-full font-bold text-xl text-gray-800 px-6">
-									Lorem ipsum dolor sit amet.
-								</div>
-								<p className="text-gray-800 text-base px-6 mb-5">
-									Lorem ipsum dolor sit amet, consectetur adipiscing
-									elit. Aliquam at ipsum eu nunc commodo posuere et sit
-									amet ligula.
-								</p>
-							</a>
-						</div>
-						<div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-							<div className="flex items-center justify-center">
-								<button className={buttonClass}>Action</button>
-							</div>
-						</div>
-					</div>
-					<div className="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-						<div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-							<a
-								href="#"
-								className="flex flex-wrap no-underline hover:no-underline"
-							>
-								<p className="w-full text-gray-600 text-xs md:text-sm px-6">
-									xGETTING STARTED
-								</p>
-								<div className="w-full font-bold text-xl text-gray-800 px-6">
-									Lorem ipsum dolor sit amet.
-								</div>
-								<p className="text-gray-800 text-base px-6 mb-5">
-									Lorem ipsum dolor sit amet, consectetur adipiscing
-									elit. Aliquam at ipsum eu nunc commodo posuere et sit
-									amet ligula.
-								</p>
-							</a>
-						</div>
-						<div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-							<div className="flex items-center justify-end">
-								<button className={buttonClass}>Action</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<GradientWaveBottom />
-			<section className="container mx-auto text-center py-6">
-				<h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
-					Call to Action
-				</h2>
-				<div className="w-full mb-4">
-					<div className="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
-				</div>
-				<h3 className="my-4 text-3xl leading-tight">
-					Main Hero Message to sell yourself!
-				</h3>
-				<button className={buttonClass}>Action!</button>
-			</section>
+			</div>
 		</div>
 	);
-}
+};
+
+export default PreparingForSchool;

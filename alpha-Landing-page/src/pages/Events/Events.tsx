@@ -11,12 +11,13 @@ import {
 	WarningBox,
 	StepItem,
 	PageHeader,
-} from '../../components/UI/ContentComponents';
+	BorderContainer,
+} from '../../components/content/ContentComponents';
 
 const SchoolEventsPage: React.FC = () => {
 	return (
 		<div className="min-h-screen gradient">
-			<div className="flex flex-col gap-5 container py-12">
+			<div className="flex flex-col justify-center items-center gap-y-10 py-12">
 				{/* Header */}
 				<div className="mb-6">
 					<PageHeader
@@ -33,7 +34,7 @@ const SchoolEventsPage: React.FC = () => {
 
 						<ImagePlaceholder color="bg-sky-500" />
 
-						<DateBadge data="📅 З 1 червня 2025" />
+						<DateBadge data="З 1 червня 2025" />
 
 						<div className="space-y-4 mb-6">
 							<DetailItem icon="🕘">Пн–Пт, з 9:00 до 18:00</DetailItem>
@@ -90,7 +91,7 @@ const SchoolEventsPage: React.FC = () => {
 
 						<ImagePlaceholder color="bg-sky-500" />
 
-						<DateBadge data="📅 6 липня - 13 липня" />
+						<DateBadge data="6 липня - 13 липня" />
 
 						<PriceBadge data="💶 320€ / 7 днів" />
 
@@ -192,16 +193,6 @@ const SchoolEventsPage: React.FC = () => {
 				</div>
 			</div>
 		</div>
-	);
-};
-
-interface BorderContainerProps {
-	children: React.ReactNode | React.ReactNode[];
-}
-
-const BorderContainer: React.FC<BorderContainerProps> = ({ children }) => {
-	return (
-		<div className="bg-white p-1 border border-teal-300 rounded-2xl">{children}</div>
 	);
 };
 

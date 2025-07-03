@@ -1,174 +1,161 @@
-import { GradientWaveBottom, GradientWaveTop } from '../../assets/GradientWave';
+import ImagePlaceholder from '../../assets/ImagePlaceholder';
+import Section from '../../components/content/Section';
+import SectionListBlockItem from '../../components/content/SectionListBlockItem';
+import SectionTextBlockItem from '../../components/content/SectionTextBlockItem';
+import SoftSkillsTable from './SoftSkillsTable';
+import { CTAButton, PageHeader } from '../../components/content/ContentComponents';
 
 export default function LeaderClub() {
-	const buttonClass =
-		'mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out';
 	return (
-		<div className="leading-normal tracking-normal text-white gradient">
-			<div>
-				<div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
-					<div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
-						<h1 className="my-4 text-5xl font-bold leading-tight">
-							Main Hero Message to sell yourself!
-						</h1>
-						<p className="leading-normal text-2xl mb-8">
-							Sub-hero message, not too long and not too short. Make it just
-							right!
+		<div className="gradient min-h-screen max-w-screen pt-10">
+			<div className="container mx-auto px-5 flex flex-col gap-5 md:flex-row justify-center items-center mb-6">
+				<PageHeader
+					title={`Клуб Лідерів "Альфа" для старшокласників`}
+					description="Простір сили, свободи і впливу."
+				/>
+				<ImagePlaceholder />
+			</div>
+			<div className="flex flex-col justify-center items-center gap-y-10">
+				<Section title={'✨ Ключова ідея:'}>
+					<SectionTextBlockItem block={<ImagePlaceholder />}>
+						<b>Клуб Лідерів "Альфа"</b> — це не табір. Це —{' '}
+						<b>
+							тренувальна база майбутніх дипломатів, підприємців і
+							змінотворців
+						</b>
+						, де <b>старшокласники (8–11 класи)</b> стають менторами для
+						молодших учнів, реалізують власні проєкти, розвивають soft skills,
+						беруть участь у симуляціях, іграх, і навіть… заробляють{' '}
+						<b>100 лв/місяць!</b>
+					</SectionTextBlockItem>
+					<SectionTextBlockItem
+						isBlockFirst
+						block={<ImagePlaceholder color="bg-green-500" />}
+					>
+						<b>Модераторка та фасилітаторка табору — Діана Парамей</b>,
+						власниця Міжнародної інноваційної школи "Альфа",амбасадор
+						Міжнародної організації лідерок "United Women", ментор, керівниця
+						освітніх трансформацій.
+					</SectionTextBlockItem>
+				</Section>
+				<Section title="📆 Формат">
+					<SectionListBlockItem
+						block={<ImagePlaceholder color="bg-yellow-500" />}
+						dataList={[
+							'🗓 Тривалість: 4 тижні (червень/липень)',
+							'🕗 10:00–16:00 пн-пт (час перебування в клубі)',
+							'👥 Учасники: 5–15 лідерів (8–11 клас)',
+							'📍 Місце: Міжнародна інноваційна школа «Альфа»  (освітньо-ігрова екосистема)',
+							'💵 Бонус: Стипендія 100 лв/місяць за участь та відповідальність',
+						]}
+					></SectionListBlockItem>
+				</Section>
+				<Section title={'📅 Організаційна інформація'}>
+					<SectionListBlockItem
+						isChildrenBeforeList
+						block={<ImagePlaceholder />}
+						dataList={[
+							'Тривалість: 4 тижні (червень–липень)',
+							'Графік: 10:00–16:00, пн–пт (може коригуватись разом)',
+							'Формат: змішане навчання, проєкти, менторство, гра',
+							'Місце: Міжнародна інноваційна школа “Альфа”, Софія',
+							'Учасники: 5–15 лідерів з 8–11 класів (з будь-яких шкіл — запрошуй друзів!)',
+						]}
+					/>
+				</Section>
+				<Section title={'🧠 Soft Skills у дії: модулі тижня'}>
+					<SoftSkillsTable />
+				</Section>
+				<Section title={'🎲 Ігрові активності (з інтелектом та змістом)'}>
+					<SectionListBlockItem
+						block={<ImagePlaceholder />}
+						dataList={[
+							'🎭 Мафія-лідерів: психологічна ролева гра на довіру, маніпуляцію, логіку',
+							'🧩 Квест "Агенти впливу": командна гра-розслідування з лідерськими завданнями',
+							'💬 Дебатний клуб "У променях Альфи": рольові дебати з оцінкою аргументації',
+							'🎲 "Світ без дорослих": настільна стратегія самоврядування та управління ресурсами',
+							'🎤 "Пітч вечір": презентації власних ідей перед менторською радою',
+						]}
+					/>
+				</Section>
+				<Section title="🌱 Менторство молодших">
+					<SectionListBlockItem
+						isChildrenBeforeList
+						title="Кожен старшокласник-лідер стає наставником для молодших:"
+						block={<ImagePlaceholder />}
+						dataList={[
+							'Приймає участь у проведенні ігор, міні-занять, підтримці під час табору',
+							'Допомагає у творчих проєктах (STEM, арт, читання)',
+							'Розвиває в собі терпіння, лідерство, вміння пояснювати просто',
+						]}
+					>
+						<p className="text-base sm:text-xl">
+							🧩 <b>Формат</b>: 2 години на день — менторська зона <br />
+							💬 <b>Інструменти</b>: “Діалогові картки наставника”,
+							“Міні-гід ментора”
 						</p>
-						<button className={buttonClass}>Subscribe</button>
-					</div>
-					<div className="w-full md:w-3/5 py-6 text-center">
-						<img className="w-full md:w-4/5 z-50" src="hero.png" />
-					</div>
-				</div>
+					</SectionListBlockItem>
+				</Section>
+				<Section title={'📈 Проєктна діяльність'}>
+					<SectionListBlockItem
+						title="Кожен старшокласник-лідер стає наставником для молодших:"
+						block={<ImagePlaceholder />}
+						dataList={[
+							'Тематичний день',
+							'Медіа-студія «Альфа-TV»',
+							'Програма антибулінгу',
+							'Альтернативна валюта табору',
+							'Insta-блог «Альфа очима лідерів»',
+						]}
+					>
+						<p className="text-base sm:text-xl">
+							Кожна команда працює над <b>реальним проєктом табору</b>.{' '}
+							<b>Пітчинг в кінці тижня</b>, зворотній зв’язок, публікація
+							результатів.
+						</p>
+					</SectionListBlockItem>
+				</Section>
+				<Section title={'🧭 Супровід'}>
+					<SectionTextBlockItem block={<ImagePlaceholder />}>
+						<p className="text-xl font-semibold text-gray-700">
+							💎<b>Діана Парамей</b> — фасилітатор, коуч, лідер. Вона
+							допомагає учасникам осмислити досвід, відкриває нові
+							перспективи, веде через рефлексії.
+							<br />
+							🛡 <b>Цінності</b>: довіра, повага, відкритість,
+							відповідальність, ініціатива
+						</p>
+					</SectionTextBlockItem>
+				</Section>
+				<Section title={'🏁 Завершення'}>
+					<SectionListBlockItem
+						isChildrenBeforeList
+						title={`Фінальний форум "Я – Лідер"`}
+						block={<ImagePlaceholder />}
+						dataList={[
+							'Вручення сертифікатів',
+							'Публічна галерея проєктів',
+							'Заробіток 100 лв/місяць, пропозиція на самоврядування у новому навчальному році в Міжнародній інноваційній школі “Альфа”',
+						]}
+					>
+						<p className="text-base sm:text-xl">
+							Кожна команда працює над <b>реальним проєктом табору</b>.
+							<br />
+							<b>Пітчинг в кінці тижня</b>, зворотній зв’язок, публікація
+							результатів.
+						</p>
+					</SectionListBlockItem>
+				</Section>
+
+				<section className="container mx-auto text-center pb-10 text-white">
+					<h3 className="my-4 text-3xl leading-tight">
+						📣 Заповни анкету прямо зараз — кількість місць обмежена!
+					</h3>
+					<CTAButton href="https://forms.gle/YxfbxR8vv44cBtqk9">
+						Приєднатися!
+					</CTAButton>
+				</section>
 			</div>
-			<div className="relative -mt-12 lg:-mt-24">
-				<GradientWaveTop />
-			</div>
-			<section className="bg-white  py-8">
-				<div className="container max-w-5xl mx-auto m-8">
-					<h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-						Title
-					</h2>
-					<div className="w-full mb-4">
-						<div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
-					</div>
-					<div className="flex flex-wrap">
-						<div className="w-5/6 sm:w-1/2 p-6">
-							<h3 className="text-3xl text-gray-800 font-bold leading-none mb-3">
-								Lorem ipsum dolor sit amet
-							</h3>
-							<p className="text-gray-600 mb-8">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-								Aliquam at ipsum eu nunc commodo posuere et sit amet
-								ligula.
-							</p>
-						</div>
-						<div className="w-full sm:w-1/2 p-6">
-							<div className="bg-red-500 w-100 h-70">
-								{/* МЕСТО ПОД КАРТИНКУ 1 */}
-							</div>
-						</div>
-					</div>
-					<div className="flex flex-wrap flex-col-reverse sm:flex-row">
-						<div className="w-full sm:w-1/2 p-6 mt-6">
-							<div className="bg-green-500 w-100 h-70">
-								{/* МЕСТО ПОД КАРТИНКУ 2 */}
-							</div>
-						</div>
-						<div className="w-full sm:w-1/2 p-6 mt-6">
-							<div className="align-middle">
-								<h3 className="text-3xl text-gray-800 font-bold leading-none mb-3">
-									Lorem ipsum dolor sit amet
-								</h3>
-								<p className="text-gray-600 mb-8">
-									Lorem ipsum dolor sit amet, consectetur adipiscing
-									elit. Aliquam at ipsum eu nunc commodo posuere et sit
-									amet ligula.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section className="bg-white  py-8">
-				<div className="container mx-auto flex flex-wrap pt-4 pb-12">
-					<h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-						Title
-					</h2>
-					<div className="w-full mb-4">
-						<div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
-					</div>
-					<div className="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-						<div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-							<a
-								href="#"
-								className="flex flex-wrap no-underline hover:no-underline"
-							>
-								<p className="w-full text-gray-600 text-xs md:text-sm px-6">
-									xGETTING STARTED
-								</p>
-								<div className="w-full font-bold text-xl text-gray-800 px-6">
-									Lorem ipsum dolor sit amet.
-								</div>
-								<p className="text-gray-800 text-base px-6 mb-5">
-									Lorem ipsum dolor sit amet, consectetur adipiscing
-									elit. Aliquam at ipsum eu nunc commodo posuere et sit
-									amet ligula.
-								</p>
-							</a>
-						</div>
-						<div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-							<div className="flex items-center justify-start">
-								<button className={buttonClass}>Action</button>
-							</div>
-						</div>
-					</div>
-					<div className="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-						<div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-							<a
-								href="#"
-								className="flex flex-wrap no-underline hover:no-underline"
-							>
-								<p className="w-full text-gray-600 text-xs md:text-sm px-6">
-									xGETTING STARTED
-								</p>
-								<div className="w-full font-bold text-xl text-gray-800 px-6">
-									Lorem ipsum dolor sit amet.
-								</div>
-								<p className="text-gray-800 text-base px-6 mb-5">
-									Lorem ipsum dolor sit amet, consectetur adipiscing
-									elit. Aliquam at ipsum eu nunc commodo posuere et sit
-									amet ligula.
-								</p>
-							</a>
-						</div>
-						<div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-							<div className="flex items-center justify-center">
-								<button className={buttonClass}>Action</button>
-							</div>
-						</div>
-					</div>
-					<div className="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-						<div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-							<a
-								href="#"
-								className="flex flex-wrap no-underline hover:no-underline"
-							>
-								<p className="w-full text-gray-600 text-xs md:text-sm px-6">
-									xGETTING STARTED
-								</p>
-								<div className="w-full font-bold text-xl text-gray-800 px-6">
-									Lorem ipsum dolor sit amet.
-								</div>
-								<p className="text-gray-800 text-base px-6 mb-5">
-									Lorem ipsum dolor sit amet, consectetur adipiscing
-									elit. Aliquam at ipsum eu nunc commodo posuere et sit
-									amet ligula.
-								</p>
-							</a>
-						</div>
-						<div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-							<div className="flex items-center justify-end">
-								<button className={buttonClass}>Action</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<GradientWaveBottom />
-			<section className="container mx-auto text-center py-6">
-				<h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
-					Call to Action
-				</h2>
-				<div className="w-full mb-4">
-					<div className="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
-				</div>
-				<h3 className="my-4 text-3xl leading-tight">
-					Main Hero Message to sell yourself!
-				</h3>
-				<button className={buttonClass}>Action!</button>
-			</section>
 		</div>
 	);
 }

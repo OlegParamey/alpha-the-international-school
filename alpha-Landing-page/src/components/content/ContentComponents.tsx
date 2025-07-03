@@ -9,6 +9,7 @@ import type React from 'react';
 // DateBadge: Yellow-orange gradient pill-shaped badge for dates
 // WarningBox: Yellow warning box with left border for important notices
 // StepItem: Numbered step with purple gradient circle and description
+// PageHeader: White text header with description
 
 interface CardContainerProps {
 	children: React.ReactNode;
@@ -55,6 +56,10 @@ interface PageHeaderProps {
 	description: string;
 }
 
+interface BorderContainerProps {
+	children: React.ReactNode | React.ReactNode[];
+}
+
 /**
  * White rounded card with shadow, hover effects, and gradient top border
  */
@@ -62,7 +67,7 @@ const CardContainer: React.FC<CardContainerProps> = ({ children, className = '' 
 	return (
 		<div
 			className={`
-      bg-white rounded-3xl p-1.5 pb-5 sm:p-8 shadow-2xl transition-all
+      bg-white rounded-3xl p-2.5 pb-5 sm:p-8 shadow-2xl transition-all
       duration-700 ease-out relative overflow-hidden lg:col-span-2 xl:col-span-1
       hover:shadow-3xl border-t-4 border-gradient-to-r from-yellow-400 to-orange-500
       ${className}`}
@@ -81,7 +86,7 @@ const CardContainer: React.FC<CardContainerProps> = ({ children, className = '' 
  */
 const ContainerHeader: React.FC<CardContainerHeaderProps> = ({ title, icon = null }) => {
 	return (
-		<div className="flex flex-row items-center my-6 justify-center sm:justify-normal">
+		<div className="flex flex-row items-center my-6 justify-center lg:justify-normal">
 			{icon && <div className="text-4xl">{icon}</div>}
 			<h2 className="text-2xl sm:text-3xl text-center font-bold text-gray-800 ">
 				{title}
@@ -154,9 +159,9 @@ const DateBadge: React.FC<BadgeProps> = ({ data }) => {
 	return (
 		<div
 			className={`inline-block bg-gradient-to-r from-yellow-400 to-orange-500 
-    text-white px-6 py-3 rounded-full font-bold text-lg mb-6`}
+    text-white px-6 py-3 rounded-full font-bold text-lg mb-6 w-full sm:w-fit`}
 		>
-			{data}
+			🗓 {data}
 		</div>
 	);
 };
@@ -189,11 +194,25 @@ const StepItem: React.FC<StepItemProps> = ({ number, children }) => (
 	</div>
 );
 
+/**
+ * White text header with description
+ */
 const PageHeader: React.FC<PageHeaderProps> = ({ title, description }) => {
 	return (
 		<div className="text-center text-white ">
 			<h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">{title}</h1>
-			<p className="text-xl md:text-2xl opacity-90">{description}</p>
+			<p className="text-xl md:text-2xl opacity-90 italic">{description}</p>
+		</div>
+	);
+};
+
+/**
+ * Adds border for children
+ */
+const BorderContainer: React.FC<BorderContainerProps> = ({ children }) => {
+	return (
+		<div className="bg-white p-1 px-4 mb-4 border border-teal-300 rounded-2xl">
+			{children}
 		</div>
 	);
 };
@@ -209,4 +228,5 @@ export {
 	WarningBox,
 	StepItem,
 	PageHeader,
+	BorderContainer,
 };

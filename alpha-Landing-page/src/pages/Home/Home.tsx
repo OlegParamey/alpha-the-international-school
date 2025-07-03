@@ -1,13 +1,8 @@
-import type React from 'react';
 import ImagePlaceholder from '../../assets/ImagePlaceholder';
 import IconImagePlaceholder from '../../assets/IconImagePlaceholder';
-import {
-	CardContainer,
-	ContainerHeader,
-	HighlightItem,
-	CTAButton,
-	PageHeader,
-} from '../../components/UI/ContentComponents';
+import Section from '../../components/content/Section';
+import SectionListBlockItem from '../../components/content/SectionListBlockItem';
+import { CTAButton, PageHeader } from '../../components/content/ContentComponents';
 
 export default function Home() {
 	return (
@@ -22,7 +17,7 @@ export default function Home() {
 			</div>
 			<div className="flex flex-col justify-center items-center gap-y-10">
 				<Section title={'Структура освітньої екосистеми'}>
-					<SectionTextBlockItem
+					<SectionListBlockItem
 						title={'Освітні програми:'}
 						block={<ImagePlaceholder />}
 						dataList={[
@@ -31,7 +26,7 @@ export default function Home() {
 							'Бізнес-школа для розвитку soft skills',
 						]}
 					/>
-					<SectionTextBlockItem
+					<SectionListBlockItem
 						isBlockFirst
 						title={'Додаткові компоненти:'}
 						block={<ImagePlaceholder color="bg-green-500" />}
@@ -45,10 +40,10 @@ export default function Home() {
 						<p className="italic text-xs text-gray-500 ">
 							Створено Фондом за образователни трансформации
 						</p>
-					</SectionTextBlockItem>
+					</SectionListBlockItem>
 				</Section>
 				<Section title="Об'єднані заради мети">
-					<SectionTextBlockItem
+					<SectionListBlockItem
 						title="Партнери та підтримка:"
 						block={
 							<div className="grid grid-cols-2 place-items-stretch gap-5 p-6 w-full sm:w-3/5 ">
@@ -64,10 +59,10 @@ export default function Home() {
 							'Бізнес-клуб «Holders»',
 							'Міжнародна організація жінок-лідерок «United Women»',
 						]}
-					></SectionTextBlockItem>
+					></SectionListBlockItem>
 				</Section>
 				<Section title={'Цінності школи'}>
-					<SectionTextBlockItem
+					<SectionListBlockItem
 						title={'Основні принципи:'}
 						block={<ImagePlaceholder />}
 						dataList={[
@@ -76,7 +71,7 @@ export default function Home() {
 							'Професіоналізм та академічна якість',
 						]}
 					/>
-					<SectionTextBlockItem
+					<SectionListBlockItem
 						isBlockFirst
 						title={'Навички та компетенції:'}
 						block={<ImagePlaceholder color="bg-green-500" />}
@@ -86,7 +81,7 @@ export default function Home() {
 							'Бізнес-освіта та проєктна діяльність',
 						]}
 					/>
-					<SectionTextBlockItem
+					<SectionListBlockItem
 						title={'Культура навчання:'}
 						block={<ImagePlaceholder color="bg-yellow-500" />}
 						dataList={[
@@ -96,7 +91,7 @@ export default function Home() {
 					/>
 				</Section>
 				<Section title={'Освітні програми та гнучкість'}>
-					<SectionTextBlockItem
+					<SectionListBlockItem
 						title={'Варіанти навчання (можна поєднувати):'}
 						block={<ImagePlaceholder />}
 						dataList={[
@@ -106,7 +101,7 @@ export default function Home() {
 							'+ Soft Skills',
 						]}
 					/>
-					<SectionTextBlockItem
+					<SectionListBlockItem
 						isBlockFirst
 						title={'Документи про освіту (є можливість отримати 3):'}
 						block={<ImagePlaceholder color="bg-green-500" />}
@@ -124,12 +119,12 @@ export default function Home() {
 					</div>
 				</Section>
 				<Section title={'Фокус розвитку'}>
-					<SectionTextBlockItem
+					<SectionListBlockItem
 						title={'Розвиток під менторством:'}
 						block={<ImagePlaceholder />}
 						dataList={['Учителів', 'Коучів', 'Бізнес-експертів']}
 					/>
-					<SectionTextBlockItem
+					<SectionListBlockItem
 						isBlockFirst
 						title={'Напрямки:'}
 						block={<ImagePlaceholder color="bg-green-500" />}
@@ -137,7 +132,7 @@ export default function Home() {
 					/>
 				</Section>
 				<Section title={'Бачення та місія школи'}>
-					<SectionTextBlockItem
+					<SectionListBlockItem
 						isChildrenBeforeList
 						title={'Бачення:'}
 						block={<ImagePlaceholder />}
@@ -151,8 +146,8 @@ export default function Home() {
 							Стати провідною інноваційною школою Європи, яка виховує
 							лідерів майбутнього через:
 						</p>
-					</SectionTextBlockItem>
-					<SectionTextBlockItem
+					</SectionListBlockItem>
+					<SectionListBlockItem
 						isChildrenBeforeList
 						isBlockFirst
 						title={'Напрямки:'}
@@ -168,7 +163,7 @@ export default function Home() {
 							Надати учням інструменти та знання для успішної
 							самореалізації, навчити їх бути:
 						</p>
-					</SectionTextBlockItem>
+					</SectionListBlockItem>
 				</Section>
 				<section className="container mx-auto text-center pb-10 text-white">
 					<h2 className="w-full my-2 text-5xl font-bold leading-tight text-center ">
@@ -189,67 +184,3 @@ export default function Home() {
 		</div>
 	);
 }
-
-type SectionProps = {
-	title: string;
-	children: React.ReactNode;
-};
-
-const Section: React.FC<SectionProps> = ({ title, children }) => {
-	return (
-		<section className="w-9/10">
-			<CardContainer>
-				<h2 className="w-full my-2 p-1 text-3xl sm:text-5xl font-bold leading-tight text-center text-gray-900">
-					{title}
-				</h2>
-				<div className="w-full mb-4">
-					<div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
-				</div>
-				{children}
-			</CardContainer>
-		</section>
-	);
-};
-
-type SectionItemProps = {
-	title: string;
-	dataList: string[];
-	block: React.ReactNode;
-	isBlockFirst?: boolean;
-	isChildrenBeforeList?: boolean;
-	children?: React.ReactNode | React.ReactNode[];
-};
-
-const SectionTextBlockItem: React.FC<SectionItemProps> = ({
-	title,
-	dataList,
-	block,
-	isBlockFirst = false,
-	isChildrenBeforeList = false,
-	children,
-}) => {
-	return (
-		<div
-			className={`flex ${
-				isBlockFirst ? 'flex-col-reverse' : 'flex-col'
-			} lg:flex-row items-center justify-around`}
-		>
-			{isBlockFirst && block}
-			<div className="w-5/6">
-				<ContainerHeader title={title} />
-				{isChildrenBeforeList && children}
-				<div className="my-4 text-lg sm:text-xl">
-					{dataList.map((element, index) => (
-						<HighlightItem key={index} icon="🔸">
-							{element}
-						</HighlightItem>
-					))}
-				</div>
-				{!isChildrenBeforeList && children && (
-					<div className="mx-8">{children}</div>
-				)}
-			</div>
-			{!isBlockFirst && block}
-		</div>
-	);
-};
