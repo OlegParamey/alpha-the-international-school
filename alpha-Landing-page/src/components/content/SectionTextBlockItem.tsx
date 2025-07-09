@@ -22,7 +22,9 @@ const SectionTextBlockItem: React.FC<SectionTextBlockItemProps> = ({
 			{isBlockFirst && block}
 			<div className="w-5/6">
 				{title && <ContainerHeader title={title} />}
-				<div className="mx-8 my-4 text-lg sm:text-xl text-black">{children}</div>
+				<div className="mx-8 my-4 text-lg sm:text-2xl xl:text-3xl text-black">
+					{children}
+				</div>
 			</div>
 			{!isBlockFirst && block}
 		</div>

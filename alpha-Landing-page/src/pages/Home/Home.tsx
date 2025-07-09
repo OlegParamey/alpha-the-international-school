@@ -8,11 +8,14 @@ export default function Home() {
 	return (
 		<div className="gradient min-h-screen max-w-screen pt-10">
 			<div className="container mx-auto px-5 flex flex-col gap-5 md:flex-row justify-center items-center mb-6">
-				<PageHeader
-					title={`Міжнародна інноваційна школа "Альфа"`}
-					description="Унікальна школа в Європі, створена для Альфа-дітей — майбутніх
+				<div className="flex flex-col gap-4">
+					<PageHeader
+						title={`Міжнародна інноваційна школа "Альфа"`}
+						description="Унікальна школа в Європі, створена для Альфа-дітей — майбутніх
 						дипломатів, бізнесменів, успішних підприємців та чесних партнерів."
-				/>
+					/>
+					<EnrollmentButton />
+				</div>
 				<ImagePlaceholder />
 			</div>
 			<div className="flex flex-col justify-center items-center gap-y-10">
@@ -34,33 +37,12 @@ export default function Home() {
 							'Методична база знань',
 							'Школа для вчителів та батьків',
 							'Центр дослідження та управління якістю освіти',
-							'Адміністративно-інформаційний центр',
-						]}
-					>
-						<p className="italic text-xs text-gray-500 ">
-							Створено Фондом за образователни трансформации
-						</p>
-					</SectionListBlockItem>
-				</Section>
-				<Section title="Об'єднані заради мети">
-					<SectionListBlockItem
-						title="Партнери та підтримка:"
-						block={
-							<div className="grid grid-cols-2 place-items-stretch gap-5 p-6 w-full sm:w-3/5 ">
-								<IconImagePlaceholder isLeft />
-								<IconImagePlaceholder />
-								<IconImagePlaceholder isLeft />
-								<IconImagePlaceholder />
-							</div>
-						}
-						dataList={[
-							'Донецький регіональний центр оцінювання якості освіти',
-							'Foundation Situational Center «Open Doors»',
-							'Бізнес-клуб «Holders»',
-							'Міжнародна організація жінок-лідерок «United Women»',
+							`Адміністративно-інформаційний центр.
+							Створено Фондом за образователни трансформации`,
 						]}
 					></SectionListBlockItem>
 				</Section>
+
 				<Section title={'Цінності школи'}>
 					<SectionListBlockItem
 						title={'Основні принципи:'}
@@ -89,16 +71,17 @@ export default function Home() {
 							'Демократична атмосфера — партнерство учнів, батьків та адміністрації',
 						]}
 					/>
+					<EnrollmentButton />
 				</Section>
-				<Section title={'Освітні програми та гнучкість'}>
+				<Section title={'Унікальність навчання'}>
 					<SectionListBlockItem
 						title={'Варіанти навчання (можна поєднувати):'}
 						block={<ImagePlaceholder />}
 						dataList={[
 							'Основна болгарська школа + українська',
 							'Основна українська школа + болгарська',
-							'+ Поглиблене вивчення англійської мови',
-							'+ Soft Skills',
+							'Вивчення декількох мов',
+							'Soft Skills',
 						]}
 					/>
 					<SectionListBlockItem
@@ -112,24 +95,9 @@ export default function Home() {
 						]}
 					/>
 				</Section>
-				<Section title="Головна відмінність">
+				<Section title="Альфа - це коли обирає дитина, а не коли обирають її">
 					<ImagePlaceholder color="bg-blue-500" />
-					<div className="text-black text-2xl font-semibold text-center p-4">
-						<h2>⭐ "Альфа - це коли обирає ви, а не коли обирають вас" ⭐</h2>
-					</div>
-				</Section>
-				<Section title={'Фокус розвитку'}>
-					<SectionListBlockItem
-						title={'Розвиток під менторством:'}
-						block={<ImagePlaceholder />}
-						dataList={['Учителів', 'Коучів', 'Бізнес-експертів']}
-					/>
-					<SectionListBlockItem
-						isBlockFirst
-						title={'Напрямки:'}
-						block={<ImagePlaceholder color="bg-green-500" />}
-						dataList={['Soft Skills', 'Бізнес-освіта', 'Особистий зріст']}
-					/>
+					<EnrollmentButton />
 				</Section>
 				<Section title={'Бачення та місія школи'}>
 					<SectionListBlockItem
@@ -141,8 +109,9 @@ export default function Home() {
 							'Розвиток підприємницьких навичок',
 							'Демократичну культуру',
 						]}
+						itemIcon=""
 					>
-						<p className="text-lg font-semibold text-gray-700">
+						<p className="text-lg xl:text-2xl font-semibold text-gray-700">
 							Стати провідною інноваційною школою Європи, яка виховує
 							лідерів майбутнього через:
 						</p>
@@ -158,29 +127,58 @@ export default function Home() {
 							'Креативними особистостями',
 							'Здатними адаптуватися у стрімко мінливому світі',
 						]}
+						itemIcon=""
 					>
-						<p className="text-lg font-semibold text-gray-700">
+						<p className="text-lg 2xl:text-2xl font-semibold text-gray-700">
 							Надати учням інструменти та знання для успішної
 							самореалізації, навчити їх бути:
 						</p>
 					</SectionListBlockItem>
 				</Section>
+				<Section title="Об'єднані заради мети">
+					<SectionListBlockItem
+						title="Партнери та підтримка:"
+						block={
+							<div className="grid grid-cols-2 place-items-stretch gap-5 p-6 w-full sm:w-3/5 ">
+								<IconImagePlaceholder isLeft />
+								<IconImagePlaceholder />
+								<IconImagePlaceholder isLeft />
+								<IconImagePlaceholder />
+								<IconImagePlaceholder isLeft />
+								<IconImagePlaceholder />
+							</div>
+						}
+						dataList={[
+							'Донецький регіональний центр оцінювання якості освіти (НМТ, ЄВІ, ЄФВВ)',
+							'Foundation Situational Center "Open Doors"',
+							'Бізнес-клуб "Holders"',
+							'Міжнародна організація жінок-лідерок «United Women»',
+							'Клуб розвитку "Prowomen Power"',
+						]}
+					></SectionListBlockItem>
+				</Section>
 				<section className="container mx-auto text-center pb-10 text-white">
 					<h2 className="w-full my-2 text-5xl font-bold leading-tight text-center ">
-						Заклик до дії
+						Ласкаво просимо до нас!
 					</h2>
 					<div className="w-full mb-4">
 						<div className="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
 					</div>
-					<h3 className="my-4 text-3xl leading-tight">
+					<h3 className="my-4 text-3xl xl:text-4xl leading-tight">
 						Міжнародна інноваційна школа "Альфа" — це простір для тих, хто
 						хоче рухатися вперед, розвиватися та досягати вершин!
 					</h3>
-					<CTAButton href="https://docs.google.com/forms/d/e/1FAIpQLSdOxtCGl-MZz525cbQQCIwSla4Dwv5E4Hi_6dccQTxxycz8PQ/viewform">
-						Приєднатися!
-					</CTAButton>
+					<EnrollmentButton />
 				</section>
 			</div>
 		</div>
 	);
 }
+
+const EnrollmentButton = () => {
+	return (
+		<CTAButton href="https://docs.google.com/forms/d/e/1FAIpQLSdOxtCGl-MZz525cbQQCIwSla4Dwv5E4Hi_6dccQTxxycz8PQ/viewform">
+			Приєднатися!
+		</CTAButton>
+	);
+};

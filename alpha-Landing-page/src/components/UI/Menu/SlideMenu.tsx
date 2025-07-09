@@ -27,8 +27,10 @@ function SlideMenu({ children, onClose, p = 'p-5' }: SlideMenuProps) {
 	return (
 		<div className={modalBackground}>
 			<div
-				className={`absolute left-0 top-0 inset-0 flex flex-col ${p}  min-h-fit h-full  max-h-[calc(100vh+50px)]
-				bg-neutral-50 max-w-full sm:max-w-2/3 md:max-w-1/2 xl:max-w-2/5 transition-all duration-200 ease-in-out shadow-2xl
+				className={`absolute left-0 top-0 inset-0 flex flex-col ${p}  
+				min-h-fit h-full  max-h-[calc(100vh+50px)]
+				bg-neutral-50 max-w-full sm:max-w-2/3 md:max-w-1/2 
+				xl:max-w-2/5 transition-all duration-200 ease-in-out shadow-2xl
         ${isVisible ? 'translate-x-0' : '-translate-x-full'}`}
 			>
 				<CloseBtn onClose={handleClose} />

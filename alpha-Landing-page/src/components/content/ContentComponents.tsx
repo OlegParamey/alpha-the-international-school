@@ -106,8 +106,10 @@ const DetailItem: React.FC<DetailItemProps> = ({ icon, children, className = '' 
     ${className}
   `}
 	>
-		<div className="text-indigo-600 mr-4 flex-shrink-0 text-xl">{icon}</div>
-		<span className="text-gray-700">{children}</span>
+		<div className="text-indigo-600 mr-4 flex-shrink-0 text-xl xl:text-2xl">
+			{icon}
+		</div>
+		<span className="text-gray-700 sm:text-lg xl:text-2xl">{children}</span>
 	</div>
 );
 
@@ -116,8 +118,8 @@ const DetailItem: React.FC<DetailItemProps> = ({ icon, children, className = '' 
  */
 const HighlightItem: React.FC<HighlightItemProps> = ({ icon, children }) => (
 	<div className="flex items-start p-3 rounded-lg transition-all duration-300 hover:bg-blue-50">
-		<span className="mr-3 flex-shrink-0 text-lg">{icon}</span>
-		<span className="text-gray-700">{children}</span>
+		<span className="mr-3 flex-shrink-0 text-lg xl:text-2xl">{icon}</span>
+		<span className="text-gray-700 sm:text-lg xl:text-2xl">{children}</span>
 	</div>
 );
 
@@ -126,10 +128,10 @@ const HighlightItem: React.FC<HighlightItemProps> = ({ icon, children }) => (
  */
 const CTAButton: React.FC<CTAButtonProps> = ({ href, children, className = '' }) => {
 	const baseClasses = `flex  text-center justify-center mx-auto w-3/4 sm:w-2/5
-  p-2 md:px-8 md:py-4 rounded-full font-bold text-lg transition-all
+  p-2 md:px-8 md:py-4 rounded-full font-bold text-lg md:2xl xl:text-4xl transition-all
   duration-300 hover:-translate-y-1 hover:shadow-xl bg-gradient-to-r 
-  from-green-500 to-emerald-500 text-white hover:from-green-600 
-  hover:to-emerald-600 shadow-lg hover:shadow-green-500/25`;
+  from-green-500 to-emerald-500 text-white hover:from-green-400 
+  hover:to-emerald-400 shadow-lg hover:shadow-green-500/25`;
 
 	return (
 		<a
@@ -159,7 +161,7 @@ const DateBadge: React.FC<BadgeProps> = ({ data }) => {
 	return (
 		<div
 			className={`inline-block bg-gradient-to-r from-yellow-400 to-orange-500 
-    text-white px-6 py-3 rounded-full font-bold text-lg mb-6 w-full sm:w-fit`}
+    text-white px-6 py-3 rounded-full font-bold text-lg xl:text-2xl mb-6 w-full sm:w-fit`}
 		>
 			🗓 {data}
 		</div>
@@ -174,7 +176,9 @@ const WarningBox: React.FC<WarningBoxProps> = ({ children }) => (
 		className={`bg-gradient-to-r from-yellow-50 to-amber-50 
   border-l-4 border-yellow-400 p-4 rounded-lg my-4`}
 	>
-		<div className="text-yellow-800 font-semibold">{children}</div>
+		<div className="text-yellow-800 font-semibold sm:text-lg xl:text-2xl">
+			{children}
+		</div>
 	</div>
 );
 
@@ -190,7 +194,7 @@ const StepItem: React.FC<StepItemProps> = ({ number, children }) => (
 		>
 			{number}
 		</div>
-		<span className="text-gray-700">{children}</span>
+		<span className="text-gray-700 xl:text-2xl">{children}</span>
 	</div>
 );
 
@@ -201,7 +205,9 @@ const PageHeader: React.FC<PageHeaderProps> = ({ title, description }) => {
 	return (
 		<div className="text-center text-white ">
 			<h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">{title}</h1>
-			<p className="text-xl md:text-2xl opacity-90 italic">{description}</p>
+			<p className="text-xl md:text-2xl xl:text-3xl opacity-90 italic">
+				{description}
+			</p>
 		</div>
 	);
 };

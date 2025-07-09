@@ -9,8 +9,17 @@ interface MenuIconProps {
 
 function MenuIcon({ setIsSlideMenuOpen }: MenuIconProps) {
 	return (
-		<IconWithAnimationActionContainer onClick={() => setIsSlideMenuOpen(true)}>
-			<FaBars />
+		<IconWithAnimationActionContainer
+			w={'w-max'}
+			h={'h-10'}
+			onClick={() => setIsSlideMenuOpen(true)}
+		>
+			<div className="flex flex-row items-center gap-x-2">
+				<FaBars />
+				<p className="pb-1 h-full font-mono tracking-wide underline underline-offset-3 text-slate-800 text-3xl">
+					МЕНЮ
+				</p>
+			</div>
 		</IconWithAnimationActionContainer>
 	);
 }

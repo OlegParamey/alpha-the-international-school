@@ -6,12 +6,12 @@ import {
 	DetailItem,
 	HighlightItem,
 	CTAButton,
-	PriceBadge,
 	DateBadge,
 	WarningBox,
 	StepItem,
 	PageHeader,
 	BorderContainer,
+	PriceBadge,
 } from '../../components/content/ContentComponents';
 
 const SchoolEventsPage: React.FC = () => {
@@ -30,7 +30,10 @@ const SchoolEventsPage: React.FC = () => {
 				<div className="flex flex-col justify-center gap-y-5 w-9/10 mx-auto">
 					{/* Літній табір */}
 					<CardContainer>
-						<ContainerHeader title={`Літній табір "Альфа"`} icon={'☀️'} />
+						<ContainerHeader
+							title={`Літній табір "Альфа" в м. Софія`}
+							icon={'☀️'}
+						/>
 
 						<ImagePlaceholder color="bg-sky-500" />
 
@@ -93,7 +96,7 @@ const SchoolEventsPage: React.FC = () => {
 
 						<DateBadge data="6 липня - 13 липня" />
 
-						<PriceBadge data="💶 320€ / 7 днів" />
+						<PriceBadge data={'💶 320€ / 7 днів'} />
 
 						<div className="space-y-4 mb-6">
 							<DetailItem icon="📍">м. Кітен, Болгарія</DetailItem>
@@ -111,7 +114,7 @@ const SchoolEventsPage: React.FC = () => {
 						<div
 							className={`italic text-gray-600 mb-6 p-4 
 							bg-gradient-to-r from-blue-50 to-cyan-50 
-							rounded-xl border-l-4 border-blue-400`}
+							rounded-xl border-l-4 border-blue-400 sm:text-lg xl:text-2xl`}
 						>
 							🌊 КОЖНА ДИТИНА ЗАСЛУГОВУЄ НА ВІДПОЧИНОК НА МОРІ! 🏖
 							<br />
@@ -221,21 +224,21 @@ const ContactData = () => {
 			className={`bg-gradient-to-r from-blue-50 to-cyan-50 
 		rounded-xl border-l-4 border-blue-400 p-6 mb-6`}
 		>
-			<h4 className="font-bold text-gray-800 mb-4 flex items-center">
+			<h4 className="font-bold sm:text-lg xl:text-2xl text-gray-800 mb-4 flex items-center">
 				<span className="mr-2 text-xl">📞</span>
 				Контакти:
 			</h4>
-			<div className="space-y-3">
+			<div className="space-y-3 sm:text-lg xl:text-xl">
 				<div className="flex items-center text-gray-700">
-					<span className="mr-3 text-indigo-600 text-lg">📱</span>
+					<span className="mr-3 text-indigo-600">📱</span>
 					<span>+380972827263 (Telegram/Viber/WhatsApp)</span>
 				</div>
 				<div className="flex items-center text-gray-700">
-					<span className="mr-3 text-indigo-600 text-lg">📱</span>
+					<span className="mr-3 text-indigo-600">📱</span>
 					<span>+359876509588 (Болгарія)</span>
 				</div>
 				<div className="flex items-center text-gray-700">
-					<span className="mr-3 text-indigo-600 text-lg">📧</span>
+					<span className="mr-3 text-indigo-600">📧</span>
 					<span>schoolalphabg@gmail.com</span>
 				</div>
 			</div>

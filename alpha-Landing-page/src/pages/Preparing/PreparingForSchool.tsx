@@ -32,10 +32,10 @@ const PreparingForSchool: React.FC = () => {
 						<ImagePlaceholder color="bg-purple-500" />
 
 						<BorderContainer>
-							<h2 className="font-bold text-gray-800 text-lg sm:text-xl mb-2 flex items-center">
+							<h2 className="font-bold text-gray-800 text-lg sm:text-2xl mb-2 flex items-center">
 								Освітня модель та цілі:
 							</h2>
-							<p className="sm:text-lg">
+							<p className="sm:text-lg xl:text-2xl">
 								Освітня модель, заснована на International Baccalaureate -
 								Primary Years Programme (PYP)
 							</p>
@@ -59,7 +59,6 @@ const PreparingForSchool: React.FC = () => {
 								block
 								title="Приблизний щоденний розклад:"
 								dataList={[
-									'🕗 08:00–08:30 — Зустріч дітей',
 									'🕣 08:30–08:50 — Ранкова зустріч',
 									'🕘 09:00–11:25 — Академічний блок: болгарська, англійська, соціальні та природничі науки, міждисциплінарні проєкти',
 									'🕚 11:25–12:30 — Обід, вільна гра',
@@ -140,7 +139,7 @@ const PreparingForSchool: React.FC = () => {
 								мистецтво, спорт і багато позитивних вражень!
 							</HighlightItem>
 						</BorderContainer>
-						<DateBadge data="Старт програм — травень/червень 2025" />
+						<DateBadge data="Протягом всього літа" />
 
 						<div className="space-y-4 mb-6">
 							<DetailItem icon="🕘">

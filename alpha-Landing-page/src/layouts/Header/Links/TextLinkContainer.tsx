@@ -22,7 +22,7 @@ function TextLinkContainer({ text, to, end = false }: TextLinkContainerProps) {
 			className={({ isActive }) =>
 				`${handleActiveClass({
 					isActive,
-				})} border-b-2 hover:border-dashed hover:bg-neutral-200 hover:text-neutral-800 
+				})} w-full border-b-2 hover:border-dashed hover:bg-neutral-200 hover:text-neutral-800 
 				 duration-75 active:scale-98`
 			}
 		>

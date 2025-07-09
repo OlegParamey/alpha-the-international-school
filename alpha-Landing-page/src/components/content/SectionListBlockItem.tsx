@@ -7,6 +7,7 @@ type SectionListBlockItemProps = {
 	isBlockFirst?: boolean;
 	isChildrenBeforeList?: boolean;
 	children?: React.ReactNode | React.ReactNode[];
+	itemIcon?: string;
 };
 
 const SectionListBlockItem: React.FC<SectionListBlockItemProps> = ({
@@ -16,6 +17,7 @@ const SectionListBlockItem: React.FC<SectionListBlockItemProps> = ({
 	isBlockFirst = false,
 	isChildrenBeforeList = false,
 	children,
+	itemIcon = '🔸',
 }) => {
 	return (
 		<div
@@ -27,9 +29,9 @@ const SectionListBlockItem: React.FC<SectionListBlockItemProps> = ({
 			<div className="w-full">
 				{title && <ContainerHeader title={title} />}
 				{isChildrenBeforeList && children}
-				<div className="my-4 text-lg sm:text-xl">
+				<div className="my-4 text-lg sm:text-xl 2xl:text-2xl">
 					{dataList.map((element, index) => (
-						<HighlightItem key={index} icon="🔸">
+						<HighlightItem key={index} icon={itemIcon}>
 							{element}
 						</HighlightItem>
 					))}

@@ -1,4 +1,12 @@
-const defaultData = [
+interface SkillData {
+	id: string;
+	icon: string;
+	module: string;
+	skill: string;
+	practice: string;
+}
+
+const skillsData: SkillData[] = [
 	{
 		id: 'leadership',
 		icon: '🔑',
@@ -43,53 +51,52 @@ const defaultData = [
 	},
 ];
 
-/**
- * Soft Skills training modules table component with modern design
- */
-const SoftSkillsTable: React.FC = () => {
-	return (
-		<div className="overflow-hidden rounded-2xl border border-gray-200">
-			<div className="divide-y divide-gray-200">
-				{defaultData.map((row, index) => (
-					<div
-						key={row.id}
-						className={`transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 ${
-							index % 2 === 0 ? 'bg-white' : 'bg-gray-50'
-						}`}
-					>
-						<div className=" p-4 space-y-3">
-							<div className="flex items-center">
-								<span className="text-2xl mr-3 flex-shrink-0">
-									{row.icon}
-								</span>
-								<span className="font-bold text-gray-800 text-lg">
-									{row.module}
-								</span>
-							</div>
+interface SkillRowProps {
+	skill: SkillData;
+	isEven: boolean;
+}
 
-							<div className="ml-11">
-								<div className="text-xs font-semibold text-indigo-600 uppercase tracking-wide mb-1">
-									Soft Skill
-								</div>
-								<div className="text-gray-700 font-medium">
-									{row.skill}
-								</div>
-							</div>
+const SkillRow: React.FC<SkillRowProps> = ({ skill, isEven }) => (
+	<div
+		className={`p-4 space-y-3 transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 ${
+			isEven ? 'bg-white' : 'bg-gray-50'
+		}`}
+	>
+		<div className="flex items-center">
+			<span className="text-2xl sm:text-3xl mr-3 flex-shrink-0">{skill.icon}</span>
+			<h3 className="font-bold text-gray-800 text-lg sm:text-3xl">
+				{skill.module}
+			</h3>
+		</div>
 
-							<div className="ml-11">
-								<div className="text-xs font-semibold text-indigo-600 uppercase tracking-wide mb-1">
-									Практика
-								</div>
-								<div className="text-gray-600 text-sm leading-relaxed">
-									{row.practice}
-								</div>
-							</div>
-						</div>
-					</div>
-				))}
+		<div className="ml-11 space-y-3 ">
+			<div>
+				<div className="text-xs sm:text-2xl font-semibold text-indigo-600 uppercase tracking-wide mb-1">
+					Soft Skill
+				</div>
+				<div className="text-gray-700 font-medium sm:text-2xl">{skill.skill}</div>
+			</div>
+
+			<div>
+				<div className="text-xs sm:text-2xl font-semibold text-indigo-600 uppercase tracking-wide mb-1">
+					Практика
+				</div>
+				<div className="text-gray-700 text-sm sm:text-2xl leading-relaxed">
+					{skill.practice}
+				</div>
 			</div>
 		</div>
-	);
-};
+	</div>
+);
+
+const SoftSkillsTable: React.FC = () => (
+	<div className="overflow-hidden rounded-2xl border border-gray-200">
+		<div className="divide-y divide-gray-200">
+			{skillsData.map((skill, index) => (
+				<SkillRow key={skill.id} skill={skill} isEven={index % 2 === 0} />
+			))}
+		</div>
+	</div>
+);
 
 export default SoftSkillsTable;

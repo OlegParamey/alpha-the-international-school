@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout';
+import ScrollToTop from './utils/ScrollToTop';
 import Home from './pages/Home/Home';
 import Events from './pages/Events/Events';
 import PreparingForSchool from './pages/Preparing/PreparingForSchool';
@@ -9,6 +10,7 @@ import LeaderClub from './pages/LeaderClub/LeaderClub';
 function App() {
 	return (
 		<BrowserRouter>
+			<ScrollToTop />
 			<Routes>
 				<Route path="/" element={<MainLayout />}>
 					<Route index element={<Home />} />
