@@ -2,7 +2,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout';
 import ScrollToTop from './utils/ScrollToTop';
 import Home from './pages/Home/Home';
-import Events from './pages/Events/Events';
+import SummerCamp from './pages/SummerEvents/SummerCamp';
+import SeaCamp from './pages/SummerEvents/SeaCamp';
 import PreparingForSchool from './pages/Preparing/PreparingForSchool';
 import LangClases from './pages/LangClases/LangClases';
 import LeaderClub from './pages/LeaderClub/LeaderClub';
@@ -14,7 +15,8 @@ function App() {
 			<Routes>
 				<Route path="/" element={<MainLayout />}>
 					<Route index element={<Home />} />
-					<Route path="healthy-events" element={<Events />} />
+					<Route path="summer-camp" element={<SummerCamp />} />
+					<Route path="sea-camp" element={<SeaCamp />} />
 					<Route path="preparing" element={<PreparingForSchool />} />
 					<Route path="language-classes" element={<LangClases />} />
 					<Route path="leader-club" element={<LeaderClub />} />

@@ -8,17 +8,19 @@ interface TextLinkContainerProps {
 	text: string;
 	to: string;
 	end?: boolean;
+	onClose: () => void;
 }
 
 function handleActiveClass({ isActive }: ActiveClassHandlerProps) {
 	return isActive ? ' !text-rose-500 hover:!bg-rose-100' : '';
 }
 
-function TextLinkContainer({ text, to, end = false }: TextLinkContainerProps) {
+function TextLinkContainer({ text, to, end = false, onClose }: TextLinkContainerProps) {
 	return (
 		<NavLink
 			to={to}
 			end={end}
+			onClick={onClose}
 			className={({ isActive }) =>
 				`${handleActiveClass({
 					isActive,

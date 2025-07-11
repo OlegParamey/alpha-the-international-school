@@ -12,11 +12,12 @@ function MenuIcon({ setIsSlideMenuOpen }: MenuIconProps) {
 		<IconWithAnimationActionContainer
 			w={'w-max'}
 			h={'h-10'}
+			textSize="text-6xl"
 			onClick={() => setIsSlideMenuOpen(true)}
 		>
-			<div className="flex flex-row items-center gap-x-2">
+			<div className="flex flex-row items-center gap-x-1 hover:underline">
 				<FaBars />
-				<p className="pb-1 h-full font-mono tracking-wide underline underline-offset-3 text-slate-800 text-3xl">
+				<p className="pb-0 h-full font-mono tracking-wide underline-offset-3 text-slate-800 text-2xl">
 					МЕНЮ
 				</p>
 			</div>
@@ -26,7 +27,11 @@ function MenuIcon({ setIsSlideMenuOpen }: MenuIconProps) {
 
 function Logo() {
 	return (
-		<IconWithAnimationActionContainer w={'w-14'} h={'h-14'}>
+		<IconWithAnimationActionContainer
+			w={'w-20'}
+			h={'h-20'}
+			scale="scale-110 hover:scale-115 active:scale-105"
+		>
 			<NavLink to="/">
 				<div>
 					<img src="favicon-512x512.png" alt="aplha" />

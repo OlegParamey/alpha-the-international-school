@@ -86,7 +86,7 @@ export default function Home() {
 					/>
 					<SectionListBlockItem
 						isBlockFirst
-						title={'Документи про освіту (є можливість отримати 3):'}
+						title={'Є можливість отримати такі документи:'}
 						block={<ImagePlaceholder color="bg-green-500" />}
 						dataList={[
 							'Болгарський атестат (Ліцензія № РД14-213/06.07.17)',
@@ -154,6 +154,7 @@ export default function Home() {
 							'Бізнес-клуб "Holders"',
 							'Міжнародна організація жінок-лідерок «United Women»',
 							'Клуб розвитку "Prowomen Power"',
+							'Студія талантів "TOP STARS"',
 						]}
 					></SectionListBlockItem>
 				</Section>

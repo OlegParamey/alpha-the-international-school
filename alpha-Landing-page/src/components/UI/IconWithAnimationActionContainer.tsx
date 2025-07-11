@@ -3,6 +3,7 @@ import type { ReactNode } from 'react';
 interface IconActionProps {
 	children?: ReactNode;
 	onClick?: () => void;
+	scale?: string;
 	isSmHidden?: boolean;
 	textSize?: string;
 	w?: string;
@@ -12,6 +13,7 @@ interface IconActionProps {
 function IconWithAnimationActionContainer({
 	children,
 	onClick,
+	scale = 'hover:scale-115 active:scale-97',
 	isSmHidden = false,
 	textSize = 'text-4xl',
 	w = 'w-10',
@@ -21,7 +23,7 @@ function IconWithAnimationActionContainer({
 		<div
 			onClick={onClick}
 			className={`${w} ${h} transition-transform duration-50 ease-out border-transparent flex items-center justify-around
-				hover:scale-115 cursor-pointer active:scale-97 text-center text-black ${textSize}
+				cursor-pointer  text-center text-black ${textSize} ${scale}
 				${isSmHidden ? 'sm:hidden' : ''}`}
 		>
 			{children}

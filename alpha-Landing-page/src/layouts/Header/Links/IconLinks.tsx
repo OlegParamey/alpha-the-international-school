@@ -21,7 +21,7 @@ function IconLinks() {
 
 			{isSlideMenuOpen && (
 				<SlideMenu onClose={() => setIsSlideMenuOpen(false)}>
-					<TextLinks />
+					<TextLinks onClose={() => setIsSlideMenuOpen(false)} />
 				</SlideMenu>
 			)}
 		</>
