@@ -15,18 +15,15 @@ const SummerCamp: React.FC = () => {
 		<div className="min-h-screen gradient">
 			<div className="flex flex-col justify-center items-center gap-y-10 py-12">
 				{/* Header */}
-				<div className="mb-6">
-					<PageHeader
-						title={`☀️ Літній табір "Альфа" в м. Софія`}
-						description=""
-					/>
+				<div>
+					<PageHeader title={`☀️ Літній табір "Альфа" в м. Софія`} />
 				</div>
 
 				{/* Events Grid */}
 				<div className="flex flex-col justify-center gap-y-5 w-9/10 mx-auto">
 					{/* Літній табір */}
 					<CardContainer>
-						<ImagePlaceholder color="bg-sky-500" />
+						<ImagePlaceholder imgSrc="events/1.jpg" isBig />
 
 						<DateBadge data="З 1 червня 2025" />
 

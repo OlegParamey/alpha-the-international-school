@@ -7,8 +7,18 @@ type TextLinksProps = {
 
 const TextLinks: React.FC<TextLinksProps> = ({ onClose }) => {
 	return (
-		<div className="flex flex-col gap-y-4 p-4 font-sans uppercase text-2xl lg:text-3xl overflow-auto">
-			<TextLinkContainer to="" end={true} text="Головна" onClose={onClose} />
+		<div className="flex flex-grow flex-col gap-y-2 p-4 font-sans uppercase text-base md:text-lg lg:text-2xl overflow-y-auto h-screen min-h-0 shadow-inner">
+			<TextLinkContainer
+				to=""
+				end={true}
+				text="ГОЛОВНА - Середня школа (1-11 кл)"
+				onClose={onClose}
+			/>
+			<TextLinkContainer
+				to="alpha-step"
+				text={`Академія Alpha Step (для дітей 4-6 років)`}
+				onClose={onClose}
+			/>
 			<TextLinkContainer to="preparing" text="1 клас" onClose={onClose} />
 			<TextLinkContainer
 				to="summer-camp"
@@ -23,7 +33,12 @@ const TextLinks: React.FC<TextLinksProps> = ({ onClose }) => {
 			/>
 			<TextLinkContainer
 				to="leader-club"
-				text={`Клуб Лідерів "Альфа" для старшокласників`}
+				text={`Клуб Лідерів "Альфа" для підлітків`}
+				onClose={onClose}
+			/>
+			<TextLinkContainer
+				to="examination"
+				text={`Альфа — центр проведення НМТ/ЄВІ/ЄФВВ`}
 				onClose={onClose}
 			/>
 		</div>

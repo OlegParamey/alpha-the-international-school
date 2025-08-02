@@ -18,33 +18,27 @@ const SeaCamp: React.FC = () => {
 		<div className="min-h-screen gradient">
 			<div className="flex flex-col justify-center items-center gap-y-10 py-12">
 				{/* Header */}
-				<div className="mb-6">
-					<PageHeader title={`🌊 "Альфа" на морі`} description="" />
+				<div>
+					<PageHeader title={`🌊 "Альфа" на морі`} />
 				</div>
 
 				{/* Events Grid */}
 				<div className="flex flex-col justify-center gap-y-5 w-9/10 mx-auto">
 					{/* Табір на морі */}
 					<CardContainer>
-						<ImagePlaceholder color="bg-sky-500" />
+						<ImagePlaceholder imgSrc="events/2.jpg" isBig />
 
 						<DateBadge data="6 липня - 13 липня" />
 
-						<PriceBadge data={'💶 320€ / 7 днів'} />
+						<DetailItem icon="📍">м. Кітен, Болгарія</DetailItem>
+						<DetailItem icon="👫">
+							Для школярів від 5 до 11 класу
+							<br />
+							<small className="text-gray-500">
+								(1-4 кл можемо записати з мамою 👩‍👧)
+							</small>
+						</DetailItem>
 
-						<div className="space-y-4 mb-6">
-							<DetailItem icon="📍">м. Кітен, Болгарія</DetailItem>
-							<DetailItem icon="🏨">
-								Готель "Лазурний" (найкращий корпус табору «Разом»)
-							</DetailItem>
-							<DetailItem icon="👫">
-								Для школярів від 5 до 11 класу
-								<br />
-								<small className="text-gray-500">
-									(1-4 кл можемо записати з мамою 👩‍👧)
-								</small>
-							</DetailItem>
-						</div>
 						<div
 							className={`italic text-gray-600 mb-6 p-4 
 							bg-gradient-to-r from-blue-50 to-cyan-50 
@@ -122,7 +116,14 @@ const SeaCamp: React.FC = () => {
 						<WarningBox>
 							☝️ У таборі також можуть відпочивати діти разом із батьками!
 						</WarningBox>
+
 						<Booking />
+						<div className="space-y-4 mb-6">
+							<PriceBadge data={'💶 320€ / 7 днів'} />
+							<DetailItem icon="🏨">
+								Готель "Лазурний" (найкращий корпус табору «Разом»)
+							</DetailItem>
+						</div>
 						<CTAButton href="https://forms.gle/vQtyq6R2amcDBK3m6">
 							📝 Приєднатись до відпочинку
 						</CTAButton>

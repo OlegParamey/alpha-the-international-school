@@ -12,7 +12,7 @@ function MenuIcon({ setIsSlideMenuOpen }: MenuIconProps) {
 		<IconWithAnimationActionContainer
 			w={'w-max'}
 			h={'h-10'}
-			textSize="text-6xl"
+			textSize="text-4xl"
 			onClick={() => setIsSlideMenuOpen(true)}
 		>
 			<div className="flex flex-row items-center gap-x-1 hover:underline">

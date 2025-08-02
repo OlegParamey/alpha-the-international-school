@@ -26,7 +26,7 @@ const SectionListBlockItem: React.FC<SectionListBlockItemProps> = ({
 			} lg:flex-row items-center justify-around`}
 		>
 			{isBlockFirst && block}
-			<div className="w-full">
+			<div className="w-full p-2">
 				{title && <ContainerHeader title={title} />}
 				{isChildrenBeforeList && children}
 				<div className="my-4 text-lg sm:text-xl 2xl:text-2xl">

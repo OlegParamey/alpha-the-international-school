@@ -15,14 +15,14 @@ const SectionTextBlockItem: React.FC<SectionTextBlockItemProps> = ({
 }) => {
 	return (
 		<div
-			className={`flex ${
+			className={`flex p-2 ${
 				isBlockFirst ? 'flex-col-reverse' : 'flex-col'
 			} lg:flex-row items-center justify-around`}
 		>
 			{isBlockFirst && block}
 			<div className="w-5/6">
 				{title && <ContainerHeader title={title} />}
-				<div className="mx-8 my-4 text-lg sm:text-2xl xl:text-3xl text-black">
+				<div className="my-4 md:mx-4 text-base md:text-lg lg:text-xl xl:text-2xl text-black">
 					{children}
 				</div>
 			</div>

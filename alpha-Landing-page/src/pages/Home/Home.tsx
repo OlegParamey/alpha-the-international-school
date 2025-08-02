@@ -7,7 +7,7 @@ import { CTAButton, PageHeader } from '../../components/content/ContentComponent
 export default function Home() {
 	return (
 		<div className="gradient min-h-screen max-w-screen pt-10">
-			<div className="container mx-auto px-5 flex flex-col gap-5 md:flex-row justify-center items-center mb-6">
+			<div className="container mx-auto px-5 flex flex-col gap-5 lg:flex-row justify-between items-center mb-6">
 				<div className="flex flex-col gap-4">
 					<PageHeader
 						title={`Міжнародна інноваційна школа "Альфа"`}
@@ -16,13 +16,13 @@ export default function Home() {
 					/>
 					<EnrollmentButton />
 				</div>
-				<ImagePlaceholder />
+				<ImagePlaceholder imgSrc="home/1.jpg" />
 			</div>
 			<div className="flex flex-col justify-center items-center gap-y-10">
 				<Section title={'Структура освітньої екосистеми'}>
 					<SectionListBlockItem
 						title={'Освітні програми:'}
-						block={<ImagePlaceholder />}
+						block={<ImagePlaceholder imgSrc="home/2.jpg" />}
 						dataList={[
 							'Державний український ліцей (1-11 класи за програмою НУШ)',
 							'Болгарська прогресивна школа (адаптована під українських дітей)',
@@ -32,7 +32,7 @@ export default function Home() {
 					<SectionListBlockItem
 						isBlockFirst
 						title={'Додаткові компоненти:'}
-						block={<ImagePlaceholder color="bg-green-500" />}
+						block={<ImagePlaceholder imgSrc="home/3.jpg" isBig />}
 						dataList={[
 							'Методична база знань',
 							'Школа для вчителів та батьків',
@@ -46,7 +46,7 @@ export default function Home() {
 				<Section title={'Цінності школи'}>
 					<SectionListBlockItem
 						title={'Основні принципи:'}
-						block={<ImagePlaceholder />}
+						block={<ImagePlaceholder imgSrc="home/4.jpg" />}
 						dataList={[
 							'Дитиноцентризм',
 							'Сучасність та інноваційність',
@@ -56,7 +56,7 @@ export default function Home() {
 					<SectionListBlockItem
 						isBlockFirst
 						title={'Навички та компетенції:'}
-						block={<ImagePlaceholder color="bg-green-500" />}
+						block={<ImagePlaceholder imgSrc="home/5.jpg" />}
 						dataList={[
 							'Фінансова та медіа грамотності',
 							'Самопізнання та розвиток Soft Skills',
@@ -65,7 +65,7 @@ export default function Home() {
 					/>
 					<SectionListBlockItem
 						title={'Культура навчання:'}
-						block={<ImagePlaceholder color="bg-yellow-500" />}
+						block={<ImagePlaceholder imgSrc="home/6.jpg" />}
 						dataList={[
 							'Командна робота та демократичні стосунки',
 							'Демократична атмосфера — партнерство учнів, батьків та адміністрації',
@@ -76,7 +76,7 @@ export default function Home() {
 				<Section title={'Унікальність навчання'}>
 					<SectionListBlockItem
 						title={'Варіанти навчання (можна поєднувати):'}
-						block={<ImagePlaceholder />}
+						block={<ImagePlaceholder imgSrc="home/7.jpg" />}
 						dataList={[
 							'Основна болгарська школа + українська',
 							'Основна українська школа + болгарська',
@@ -87,7 +87,9 @@ export default function Home() {
 					<SectionListBlockItem
 						isBlockFirst
 						title={'Є можливість отримати такі документи:'}
-						block={<ImagePlaceholder color="bg-green-500" />}
+						block={
+							<ImagePlaceholder imgSrc="home/8.jpg" isBig isRoundedFull />
+						}
 						dataList={[
 							'Болгарський атестат (Ліцензія № РД14-213/06.07.17)',
 							'Українське свідоцтво про освіту (Державний ліцей)',
@@ -96,14 +98,14 @@ export default function Home() {
 					/>
 				</Section>
 				<Section title="Альфа - це коли обирає дитина, а не коли обирають її">
-					<ImagePlaceholder color="bg-blue-500" />
+					<ImagePlaceholder imgSrc="home/9.jpg" isBig />
 					<EnrollmentButton />
 				</Section>
 				<Section title={'Бачення та місія школи'}>
 					<SectionListBlockItem
 						isChildrenBeforeList
 						title={'Бачення:'}
-						block={<ImagePlaceholder />}
+						block={<ImagePlaceholder imgSrc="home/10.jpg" />}
 						dataList={[
 							'Якісну академічну освіту',
 							'Розвиток підприємницьких навичок',
@@ -120,7 +122,7 @@ export default function Home() {
 						isChildrenBeforeList
 						isBlockFirst
 						title={'Напрямки:'}
-						block={<ImagePlaceholder color="bg-green-500" />}
+						block={<ImagePlaceholder imgSrc="home/11.jpg" />}
 						dataList={[
 							'Фінансово грамотними',
 							'Соціально відповідальними',

@@ -7,6 +7,8 @@ import SeaCamp from './pages/SummerEvents/SeaCamp';
 import PreparingForSchool from './pages/Preparing/PreparingForSchool';
 import LangClases from './pages/LangClases/LangClases';
 import LeaderClub from './pages/LeaderClub/LeaderClub';
+import Examination from './pages/Examination/Examination';
+import AlphaStep from './pages/AplhaStep/AlphaStep';
 
 function App() {
 	return (
@@ -20,6 +22,9 @@ function App() {
 					<Route path="preparing" element={<PreparingForSchool />} />
 					<Route path="language-classes" element={<LangClases />} />
 					<Route path="leader-club" element={<LeaderClub />} />
+					<Route path="examination" element={<Examination />} />
+					<Route path="alpha-step" element={<AlphaStep />} />
+
 					<Route path="*" element={<div>Not found</div>} />
 				</Route>
 			</Routes>

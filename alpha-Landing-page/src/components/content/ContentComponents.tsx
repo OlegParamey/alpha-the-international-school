@@ -3,7 +3,7 @@ import type React from 'react';
 // CardContainer: White rounded card with shadow, hover effects, and gradient top border
 // ContainerHeader: Header with icon and title for card sections
 // DetailItem: Blue gradient background item with icon and text, slides right on hover
-// HighlightItem: Simple item with green icon and text, subtle hover background
+// HighlightItem: Simple item with icon and text, subtle hover background
 // CTAButton: Green gradient call-to-action button with hover lift effect
 // PriceBadge: Red-pink gradient badge for displaying price information
 // DateBadge: Yellow-orange gradient pill-shaped badge for dates
@@ -22,13 +22,13 @@ interface CardContainerHeaderProps {
 }
 
 interface DetailItemProps {
-	icon: string;
+	icon?: string;
 	children: React.ReactNode;
 	className?: string;
 }
 
 interface HighlightItemProps {
-	icon: string;
+	icon?: string;
 	children: React.ReactNode;
 }
 
@@ -53,7 +53,7 @@ interface StepItemProps {
 
 interface PageHeaderProps {
 	title: string;
-	description: string;
+	description?: string;
 }
 
 interface BorderContainerProps {
@@ -69,7 +69,7 @@ const CardContainer: React.FC<CardContainerProps> = ({ children, className = '' 
 			className={`
       bg-white rounded-3xl p-2.5 pb-5 sm:p-8 shadow-2xl transition-all
       duration-700 ease-out relative overflow-hidden lg:col-span-2 xl:col-span-1
-      hover:shadow-3xl border-t-4 border-gradient-to-r from-yellow-400 to-orange-500
+      hover:shadow-3xl border-t-4 border-gradient-to-r from-yellow-400 to-orange-500 text-xl
       ${className}`}
 		>
 			<div
@@ -86,9 +86,9 @@ const CardContainer: React.FC<CardContainerProps> = ({ children, className = '' 
  */
 const ContainerHeader: React.FC<CardContainerHeaderProps> = ({ title, icon = null }) => {
 	return (
-		<div className="flex flex-row items-center my-6 justify-center lg:justify-normal">
+		<div className="flex flex-row items-center my-6 justify-center w-full">
 			{icon && <div className="text-4xl">{icon}</div>}
-			<h2 className="text-2xl sm:text-3xl text-center font-bold text-gray-800 ">
+			<h2 className="text-2xl sm:text-4xl xl:text-5xl text-center font-bold text-gray-800 ">
 				{title}
 			</h2>
 		</div>
@@ -101,15 +101,17 @@ const ContainerHeader: React.FC<CardContainerHeaderProps> = ({ title, icon = nul
 const DetailItem: React.FC<DetailItemProps> = ({ icon, children, className = '' }) => (
 	<div
 		className={`
-    flex items-center p-3 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl mb-4 
+    flex items-start p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl mb-4 
     transition-all duration-300 hover:from-blue-100 hover:to-indigo-100 hover:translate-x-2
     ${className}
   `}
 	>
-		<div className="text-indigo-600 mr-4 flex-shrink-0 text-xl xl:text-2xl">
-			{icon}
-		</div>
-		<span className="text-gray-700 sm:text-lg xl:text-2xl">{children}</span>
+		{icon && icon.length > 0 && (
+			<div className="text-indigo-600 mr-4 flex-shrink-0 text-xl xl:text-2xl">
+				{icon}
+			</div>
+		)}
+		<span className="text-gray-700 sm:text-lg xl:text-2xl w-full">{children}</span>
 	</div>
 );
 
@@ -117,9 +119,11 @@ const DetailItem: React.FC<DetailItemProps> = ({ icon, children, className = '' 
  * Simple item with icon and text, subtle hover background
  */
 const HighlightItem: React.FC<HighlightItemProps> = ({ icon, children }) => (
-	<div className="flex items-start p-3 rounded-lg transition-all duration-300 hover:bg-blue-50">
-		<span className="mr-3 flex-shrink-0 text-lg xl:text-2xl">{icon}</span>
-		<span className="text-gray-700 sm:text-lg xl:text-2xl">{children}</span>
+	<div className="flex items-start p-2 sm:p-3 mb-1 rounded-lg transition-all duration-300 hover:bg-blue-50 ">
+		{icon && icon.length > 0 && (
+			<span className="mr-3 flex-shrink-0 text-lg xl:text-2xl">{icon}</span>
+		)}
+		<span className="text-gray-700 text-base sm:text-lg xl:text-2xl">{children}</span>
 	</div>
 );
 
@@ -149,7 +153,7 @@ const CTAButton: React.FC<CTAButtonProps> = ({ href, children, className = '' })
  * Red-pink gradient badge for displaying price information
  */
 const PriceBadge: React.FC<BadgeProps> = ({ data }) => (
-	<div className="bg-gradient-to-r from-red-500 to-pink-500 text-white p-6 rounded-2xl text-center mb-6 shadow-lg">
+	<div className="bg-gradient-to-r from-red-500 to-pink-500 text-white p-4 sm:p-5 rounded-2xl text-center shadow-lg">
 		<div className="text-3xl font-bold">{data}</div>
 	</div>
 );
@@ -161,7 +165,7 @@ const DateBadge: React.FC<BadgeProps> = ({ data }) => {
 	return (
 		<div
 			className={`inline-block bg-gradient-to-r from-yellow-400 to-orange-500 
-    text-white px-6 py-3 rounded-full font-bold text-lg xl:text-2xl mb-6 w-full sm:w-fit`}
+    text-white px-8 sm:px-6 py-3 sm:py-5 rounded-full font-bold text-lg xl:text-2xl mb-6 w-full sm:w-fit`}
 		>
 			🗓 {data}
 		</div>
@@ -204,7 +208,7 @@ const StepItem: React.FC<StepItemProps> = ({ number, children }) => (
 const PageHeader: React.FC<PageHeaderProps> = ({ title, description }) => {
 	return (
 		<div className="text-center text-white ">
-			<h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">{title}</h1>
+			<h1 className="text-4xl md:text-5xl xl:text-6xl font-bold mb-4">{title}</h1>
 			<p className="text-xl md:text-2xl xl:text-3xl opacity-90 italic">
 				{description}
 			</p>

@@ -18,9 +18,9 @@ const PreparingForSchool: React.FC = () => {
 		<div className="min-h-screen gradient">
 			<div className="flex flex-col justify-center items-center gap-y-10 py-12">
 				{/* Header */}
-				<div className="mb-6">
+				<div>
 					<PageHeader
-						title={`🏫 Концепція 1 класу та підготовка`}
+						title={`🏫 Концепція 1 класу та підготовка до школи`}
 						description="Освітня модель та цілі"
 					/>
 				</div>
@@ -29,7 +29,7 @@ const PreparingForSchool: React.FC = () => {
 					<CardContainer>
 						<ContainerHeader title={`Концепція 1 класу`} icon={'📚'} />
 
-						<ImagePlaceholder color="bg-purple-500" />
+						<ImagePlaceholder imgSrc="preparing/1.jpg" isBig />
 
 						<BorderContainer>
 							<h2 className="font-bold text-gray-800 text-lg sm:text-2xl mb-2 flex items-center">
@@ -70,17 +70,14 @@ const PreparingForSchool: React.FC = () => {
 						</div>
 						<div className="w-full">
 							<h2 className="text-3xl sm:text-4xl text-center lg:text-start font-bold text-gray-800 ">
-								Місячні та річні активності:
+								📅 Місячні та річні активності:
 							</h2>
 							<SectionListBlockItem
 								block
-								title="📆 Щомісячно:"
-								dataList={['Навчання на природі', 'Культурні враження']}
-							/>
-							<SectionListBlockItem
-								block
-								title="📅 Протягом року:"
+								title=""
 								dataList={[
+									'Навчання на природі',
+									'Культурні враження',
 									'Вступна програма (перші 6 тижнів)',
 									'Виїзди на природу (до 2 разів на рік)',
 									'Тристороння зустріч учень–учитель–батьки (вступна, фінальна)',
@@ -100,7 +97,9 @@ const PreparingForSchool: React.FC = () => {
 							icon={'🎒'}
 						/>
 
-						<ImagePlaceholder color="bg-sky-500" />
+						<div className="mx-auto max-w-6/7">
+							<ImagePlaceholder imgSrc="preparing/2.jpg" isBig />
+						</div>
 
 						<DetailItem icon="👶">
 							Якщо ваша дитина восени йде до школи — саме час зробити цей
