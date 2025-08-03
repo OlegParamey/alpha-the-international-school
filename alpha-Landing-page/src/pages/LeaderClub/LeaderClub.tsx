@@ -1,4 +1,4 @@
-import ImagePlaceholder from '../../assets/ImagePlaceholder';
+import ImageHolder from '../../assets/ImageHolder';
 import Section from '../../components/content/Section';
 import SectionListBlockItem from '../../components/content/SectionListBlockItem';
 import SectionTextBlockItem from '../../components/content/SectionTextBlockItem';
@@ -16,12 +16,12 @@ export default function LeaderClub() {
 					/>
 					<EnrollmentButton />
 				</div>
-				<ImagePlaceholder imgSrc="leaderClub/1.jpg" />
+				<ImageHolder imgSrc="leaderClub/1.jpg" />
 			</div>
 			<div className="flex flex-col justify-center items-center gap-y-10">
 				<Section title={'✨ Ключова ідея:'}>
 					<SectionTextBlockItem
-						block={<ImagePlaceholder imgSrc="leaderClub/2.jpg" />}
+						block={<ImageHolder imgSrc="leaderClub/2.jpg" />}
 					>
 						<b>Клуб Лідерів "Альфа"</b> — це не табір. Це —{' '}
 						<b>
@@ -35,7 +35,7 @@ export default function LeaderClub() {
 					</SectionTextBlockItem>
 					<SectionTextBlockItem
 						isBlockFirst
-						block={<ImagePlaceholder imgSrc="leaderClub/3.jpg" />}
+						block={<ImageHolder imgSrc="leaderClub/3.jpg" />}
 					>
 						<b>Модераторка та фасилітаторка табору — Діана Парамей</b>,
 						власниця Міжнародної інноваційної школи "Альфа",амбасадор
@@ -45,7 +45,7 @@ export default function LeaderClub() {
 				</Section>
 				<Section title="📆 Формат та організаційна інформація">
 					<SectionListBlockItem
-						block={<ImagePlaceholder imgSrc="leaderClub/4.jpg" />}
+						block={<ImageHolder imgSrc="leaderClub/4.jpg" />}
 						dataList={[
 							'🗓 Тривалість: 4 тижні (червень-січень)',
 							'🕗 Графік: 10:00–16:00, пн–пт (може коригуватись разом)',
@@ -55,13 +55,14 @@ export default function LeaderClub() {
 							'💵 Бонус: Стипендія 100 лв/місяць за участь та відповідальність',
 						]}
 					/>
+					<EnrollmentButton />
 				</Section>
 				<Section title={'🧠 Soft Skills у дії: модулі тижня'}>
 					<SoftSkillsTable />
 				</Section>
 				<Section title={'🎲 Ігрові активності (з інтелектом та змістом)'}>
 					<SectionListBlockItem
-						block={<ImagePlaceholder imgSrc="leaderClub/5.jpg" />}
+						block={<ImageHolder imgSrc="leaderClub/5.jpg" />}
 						dataList={[
 							'🎭 Мафія-лідерів: психологічна ролева гра на довіру, маніпуляцію, логіку',
 							'🧩 Квест "Агенти впливу": командна гра-розслідування з лідерськими завданнями',
@@ -76,14 +77,14 @@ export default function LeaderClub() {
 						isBlockFirst
 						isChildrenBeforeList
 						title="Кожен старшокласник-лідер стає наставником для молодших:"
-						block={<ImagePlaceholder imgSrc="leaderClub/6.jpg" />}
+						block={<ImageHolder imgSrc="leaderClub/6.jpg" />}
 						dataList={[
 							'Приймає участь у проведенні ігор, міні-занять, підтримці під час табору',
 							'Допомагає у творчих проєктах (STEM, арт, читання)',
 							'Розвиває в собі терпіння, лідерство, вміння пояснювати просто',
 						]}
 					>
-						<p className="text-base sm:text-xl">
+						<p className="px-2 text-base sm:text-xl">
 							🧩 <b>Формат</b>: 2 години на день — менторська зона <br />
 							💬 <b>Інструменти</b>: “Діалогові картки наставника”,
 							“Міні-гід ментора”
@@ -93,7 +94,7 @@ export default function LeaderClub() {
 				<Section title={'📈 Проєктна діяльність'}>
 					<SectionListBlockItem
 						title="Кожен старшокласник-лідер стає наставником для молодших:"
-						block={<ImagePlaceholder imgSrc="leaderClub/7.jpg" isBig />}
+						block={<ImageHolder imgSrc="leaderClub/7.jpg" isBig />}
 						dataList={[
 							'Тематичний день',
 							'Медіа-студія «Альфа-TV»',
@@ -112,7 +113,7 @@ export default function LeaderClub() {
 				<Section title={'🧭 Супровід'}>
 					<SectionTextBlockItem
 						isBlockFirst
-						block={<ImagePlaceholder imgSrc="leaderClub/8.jpg" isBig />}
+						block={<ImageHolder imgSrc="leaderClub/8.jpg" isBig />}
 					>
 						<p className="text-lg sm:text-2xl xl:text-3xl font-semibold text-gray-700">
 							💎<b>Діана Парамей</b> — фасилітатор, коуч, лідер. Вона
@@ -128,7 +129,7 @@ export default function LeaderClub() {
 					<SectionListBlockItem
 						isChildrenBeforeList
 						title={`Фінальний форум "Я – Лідер"`}
-						block={<ImagePlaceholder imgSrc="leaderClub/9.jpg" isBig />}
+						block={<ImageHolder imgSrc="leaderClub/9.jpg" isBig />}
 						dataList={[
 							'Вручення сертифікатів',
 							'Публічна галерея проєктів',

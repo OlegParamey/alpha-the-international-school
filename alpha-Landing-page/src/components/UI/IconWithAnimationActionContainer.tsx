@@ -13,7 +13,7 @@ interface IconActionProps {
 function IconWithAnimationActionContainer({
 	children,
 	onClick,
-	scale = 'hover:scale-115 active:scale-97',
+	scale = 'hover:scale-110 active:scale-105',
 	isSmHidden = false,
 	textSize = 'text-4xl',
 	w = 'w-10',

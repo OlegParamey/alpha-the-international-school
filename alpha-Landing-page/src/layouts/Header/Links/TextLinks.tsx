@@ -21,14 +21,8 @@ const TextLinks: React.FC<TextLinksProps> = ({ onClose }) => {
 			/>
 			<TextLinkContainer to="preparing" text="1 клас" onClose={onClose} />
 			<TextLinkContainer
-				to="summer-camp"
-				text={`Літній табір "Альфа"`}
-				onClose={onClose}
-			/>
-			<TextLinkContainer to="sea-camp" text={`"Альфа" на морі`} onClose={onClose} />
-			<TextLinkContainer
-				to="language-classes"
-				text="Мовні курси"
+				to="examination"
+				text={`Альфа — центр проведення НМТ/ЄВІ/ЄФВВ`}
 				onClose={onClose}
 			/>
 			<TextLinkContainer
@@ -37,10 +31,16 @@ const TextLinks: React.FC<TextLinksProps> = ({ onClose }) => {
 				onClose={onClose}
 			/>
 			<TextLinkContainer
-				to="examination"
-				text={`Альфа — центр проведення НМТ/ЄВІ/ЄФВВ`}
+				to="language-classes"
+				text="Мовні курси"
 				onClose={onClose}
 			/>
+			<TextLinkContainer
+				to="summer-camp"
+				text={`Літній табір "Альфа"`}
+				onClose={onClose}
+			/>
+			<TextLinkContainer to="sea-camp" text={`"Альфа" на морі`} onClose={onClose} />
 		</div>
 	);
 };

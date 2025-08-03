@@ -145,6 +145,9 @@ const CTAButton: React.FC<CTAButtonProps> = ({ href, children, className = '' })
 			className={`${baseClasses} ${className}`}
 		>
 			{children}
+			<span className="flex items-center animate-pulse text-sm sm:text-2xl mr-1">
+				🔴
+			</span>
 		</a>
 	);
 };
@@ -209,9 +212,11 @@ const PageHeader: React.FC<PageHeaderProps> = ({ title, description }) => {
 	return (
 		<div className="text-center text-white ">
 			<h1 className="text-4xl md:text-5xl xl:text-6xl font-bold mb-4">{title}</h1>
-			<p className="text-xl md:text-2xl xl:text-3xl opacity-90 italic">
-				{description}
-			</p>
+			{description && (
+				<p className="text-xl md:text-2xl xl:text-3xl opacity-90 italic">
+					{description}
+				</p>
+			)}{' '}
 		</div>
 	);
 };

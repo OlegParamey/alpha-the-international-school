@@ -1,5 +1,5 @@
 import type React from 'react';
-import ImagePlaceholder from '../../assets/ImagePlaceholder';
+import ImageHolder from '../../assets/ImageHolder';
 import SectionListBlockItem from '../../components/content/SectionListBlockItem';
 import {
 	CardContainer,
@@ -29,7 +29,7 @@ const PreparingForSchool: React.FC = () => {
 					<CardContainer>
 						<ContainerHeader title={`Концепція 1 класу`} icon={'📚'} />
 
-						<ImagePlaceholder imgSrc="preparing/1.jpg" isBig />
+						<ImageHolder imgSrc="preparing/1.jpg" isBig />
 
 						<BorderContainer>
 							<h2 className="font-bold text-gray-800 text-lg sm:text-2xl mb-2 flex items-center">
@@ -98,7 +98,7 @@ const PreparingForSchool: React.FC = () => {
 						/>
 
 						<div className="mx-auto max-w-6/7">
-							<ImagePlaceholder imgSrc="preparing/2.jpg" isBig />
+							<ImageHolder imgSrc="preparing/2.jpg" isBig />
 						</div>
 
 						<DetailItem icon="👶">

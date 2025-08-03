@@ -12,7 +12,7 @@ function MenuIcon({ setIsSlideMenuOpen }: MenuIconProps) {
 		<IconWithAnimationActionContainer
 			w={'w-max'}
 			h={'h-10'}
-			textSize="text-4xl"
+			textSize="text-5xl"
 			onClick={() => setIsSlideMenuOpen(true)}
 		>
 			<div className="flex flex-row items-center gap-x-1 hover:underline">
@@ -30,7 +30,7 @@ function Logo() {
 		<IconWithAnimationActionContainer
 			w={'w-20'}
 			h={'h-20'}
-			scale="scale-110 hover:scale-115 active:scale-105"
+			scale="scale-100 hover:scale-110 active:scale-105"
 		>
 			<NavLink to="/">
 				<div>

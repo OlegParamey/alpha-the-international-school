@@ -6,7 +6,7 @@ function Header() {
 		<>
 			<nav
 				className="bg-white text-neutral-900 px-2 min-h-18 fixed top-0
-			flex flex-row items-center w-full border-b-6 z-100"
+			flex flex-row items-center w-full border-b-5 z-100"
 			>
 				<IconLinks />
 			</nav>

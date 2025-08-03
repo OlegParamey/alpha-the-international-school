@@ -1,5 +1,5 @@
 import type React from 'react';
-import ImagePlaceholder from '../../assets/ImagePlaceholder';
+import ImageHolder from '../../assets/ImageHolder';
 import {
 	CardContainer,
 	DetailItem,
@@ -23,7 +23,7 @@ const SummerCamp: React.FC = () => {
 				<div className="flex flex-col justify-center gap-y-5 w-9/10 mx-auto">
 					{/* Літній табір */}
 					<CardContainer>
-						<ImagePlaceholder imgSrc="events/1.jpg" isBig />
+						<ImageHolder imgSrc="events/1.jpg" isBig />
 
 						<DateBadge data="З 1 червня 2025" />
 

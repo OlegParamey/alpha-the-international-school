@@ -1,5 +1,5 @@
 import type React from 'react';
-// import ImagePlaceholder from '../../assets/ImagePlaceholder';
+// import ImageHolder from '../../assets/ImageHolder';
 import {
 	CardContainer,
 	ContainerHeader,
@@ -48,7 +48,7 @@ const AlphaStep: React.FC = () => {
 								взаємодію
 							</HighlightItem>
 						</BorderContainer>
-						{/* <ImagePlaceholder imgSrc="preparing/1.jpg" isBig /> */}
+						{/* <ImageHolder imgSrc="preparing/1.jpg" isBig /> */}
 
 						<ContainerHeader title="🧩 Освітні напрями:" />
 

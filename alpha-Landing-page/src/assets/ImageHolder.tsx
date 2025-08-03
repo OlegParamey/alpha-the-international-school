@@ -4,7 +4,7 @@ interface ImageProps {
 	isRoundedFull?: boolean;
 }
 
-export default function ImagePlaceholder({
+export default function ImageHolder({
 	imgSrc,
 	isBig = false,
 	isRoundedFull = false,
@@ -16,12 +16,17 @@ export default function ImagePlaceholder({
 					isRoundedFull ? 'rounded-full' : 'rounded-2xl'
 				} overflow-hidden `}
 			>
-				<img
-					src={imgSrc}
-					alt={imgSrc}
-					className="w-full h-full object-contain mx-auto"
-				/>
-				{/* МЕСТО ПОД КАРТИНКУ */}
+				{imgSrc ? (
+					<img
+						src={imgSrc}
+						alt="Image content"
+						className="w-full h-full object-contain mx-auto"
+					/>
+				) : (
+					<div className="w-full h-full bg-gray-200 flex items-center justify-center">
+						<span className="text-gray-500">No image available</span>
+					</div>
+				)}
 			</div>
 		</div>
 	);

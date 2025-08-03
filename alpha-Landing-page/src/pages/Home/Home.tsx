@@ -1,5 +1,5 @@
-import ImagePlaceholder from '../../assets/ImagePlaceholder';
-import IconImagePlaceholder from '../../assets/IconImagePlaceholder';
+import ImageHolder from '../../assets/ImageHolder';
+import LogoImage from '../../assets/LogoImage';
 import Section from '../../components/content/Section';
 import SectionListBlockItem from '../../components/content/SectionListBlockItem';
 import { CTAButton, PageHeader } from '../../components/content/ContentComponents';
@@ -16,13 +16,13 @@ export default function Home() {
 					/>
 					<EnrollmentButton />
 				</div>
-				<ImagePlaceholder imgSrc="home/1.jpg" />
+				<ImageHolder imgSrc="home/1.jpg" />
 			</div>
 			<div className="flex flex-col justify-center items-center gap-y-10">
 				<Section title={'Структура освітньої екосистеми'}>
 					<SectionListBlockItem
 						title={'Освітні програми:'}
-						block={<ImagePlaceholder imgSrc="home/2.jpg" />}
+						block={<ImageHolder imgSrc="home/2.jpg" />}
 						dataList={[
 							'Державний український ліцей (1-11 класи за програмою НУШ)',
 							'Болгарська прогресивна школа (адаптована під українських дітей)',
@@ -32,7 +32,7 @@ export default function Home() {
 					<SectionListBlockItem
 						isBlockFirst
 						title={'Додаткові компоненти:'}
-						block={<ImagePlaceholder imgSrc="home/3.jpg" isBig />}
+						block={<ImageHolder imgSrc="home/3.jpg" isBig />}
 						dataList={[
 							'Методична база знань',
 							'Школа для вчителів та батьків',
@@ -46,7 +46,7 @@ export default function Home() {
 				<Section title={'Цінності школи'}>
 					<SectionListBlockItem
 						title={'Основні принципи:'}
-						block={<ImagePlaceholder imgSrc="home/4.jpg" />}
+						block={<ImageHolder imgSrc="home/4.jpg" />}
 						dataList={[
 							'Дитиноцентризм',
 							'Сучасність та інноваційність',
@@ -56,7 +56,7 @@ export default function Home() {
 					<SectionListBlockItem
 						isBlockFirst
 						title={'Навички та компетенції:'}
-						block={<ImagePlaceholder imgSrc="home/5.jpg" />}
+						block={<ImageHolder imgSrc="home/5.jpg" />}
 						dataList={[
 							'Фінансова та медіа грамотності',
 							'Самопізнання та розвиток Soft Skills',
@@ -65,10 +65,10 @@ export default function Home() {
 					/>
 					<SectionListBlockItem
 						title={'Культура навчання:'}
-						block={<ImagePlaceholder imgSrc="home/6.jpg" />}
+						block={<ImageHolder imgSrc="home/6.jpg" />}
 						dataList={[
 							'Командна робота та демократичні стосунки',
-							'Демократична атмосфера — партнерство учнів, батьків та адміністрації',
+							'Демократична атмосфера — партнерство учнів, батьків та вчителів',
 						]}
 					/>
 					<EnrollmentButton />
@@ -76,7 +76,7 @@ export default function Home() {
 				<Section title={'Унікальність навчання'}>
 					<SectionListBlockItem
 						title={'Варіанти навчання (можна поєднувати):'}
-						block={<ImagePlaceholder imgSrc="home/7.jpg" />}
+						block={<ImageHolder imgSrc="home/7.jpg" />}
 						dataList={[
 							'Основна болгарська школа + українська',
 							'Основна українська школа + болгарська',
@@ -87,9 +87,7 @@ export default function Home() {
 					<SectionListBlockItem
 						isBlockFirst
 						title={'Є можливість отримати такі документи:'}
-						block={
-							<ImagePlaceholder imgSrc="home/8.jpg" isBig isRoundedFull />
-						}
+						block={<ImageHolder imgSrc="home/8.jpg" isBig isRoundedFull />}
 						dataList={[
 							'Болгарський атестат (Ліцензія № РД14-213/06.07.17)',
 							'Українське свідоцтво про освіту (Державний ліцей)',
@@ -98,14 +96,14 @@ export default function Home() {
 					/>
 				</Section>
 				<Section title="Альфа - це коли обирає дитина, а не коли обирають її">
-					<ImagePlaceholder imgSrc="home/9.jpg" isBig />
+					<ImageHolder imgSrc="home/9.jpg" isBig />
 					<EnrollmentButton />
 				</Section>
 				<Section title={'Бачення та місія школи'}>
 					<SectionListBlockItem
 						isChildrenBeforeList
 						title={'Бачення:'}
-						block={<ImagePlaceholder imgSrc="home/10.jpg" />}
+						block={<ImageHolder imgSrc="home/10.jpg" />}
 						dataList={[
 							'Якісну академічну освіту',
 							'Розвиток підприємницьких навичок',
@@ -122,7 +120,7 @@ export default function Home() {
 						isChildrenBeforeList
 						isBlockFirst
 						title={'Напрямки:'}
-						block={<ImagePlaceholder imgSrc="home/11.jpg" />}
+						block={<ImageHolder imgSrc="home/11.jpg" />}
 						dataList={[
 							'Фінансово грамотними',
 							'Соціально відповідальними',
@@ -142,17 +140,17 @@ export default function Home() {
 						title="Партнери та підтримка:"
 						block={
 							<div className="grid grid-cols-2 place-items-stretch gap-5 p-6 w-full sm:w-3/5 ">
-								<IconImagePlaceholder isLeft />
-								<IconImagePlaceholder />
-								<IconImagePlaceholder isLeft />
-								<IconImagePlaceholder />
-								<IconImagePlaceholder isLeft />
-								<IconImagePlaceholder />
+								<LogoImage isLeft imgSrc="partners/1.jpg" />
+								<LogoImage imgSrc="partners/2.jpg" />
+								<LogoImage isLeft imgSrc="partners/3.jpg" />
+								<LogoImage imgSrc="partners/4.jpg" />
+								<LogoImage isLeft imgSrc="partners/5.jpg" />
+								<LogoImage imgSrc="partners/6.jpg" />
 							</div>
 						}
 						dataList={[
 							'Донецький регіональний центр оцінювання якості освіти (НМТ, ЄВІ, ЄФВВ)',
-							'Foundation Situational Center "Open Doors"',
+							'Центр підтримки бізнесу',
 							'Бізнес-клуб "Holders"',
 							'Міжнародна організація жінок-лідерок «United Women»',
 							'Клуб розвитку "Prowomen Power"',

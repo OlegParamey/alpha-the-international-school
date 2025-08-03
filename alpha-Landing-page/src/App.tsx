@@ -8,7 +8,7 @@ import PreparingForSchool from './pages/Preparing/PreparingForSchool';
 import LangClases from './pages/LangClases/LangClases';
 import LeaderClub from './pages/LeaderClub/LeaderClub';
 import Examination from './pages/Examination/Examination';
-import AlphaStep from './pages/AplhaStep/AlphaStep';
+import AlphaStep from './pages/AlphaStep/AlphaStep';
 
 function App() {
 	return (

@@ -1,5 +1,5 @@
 import type React from 'react';
-import ImagePlaceholder from '../../assets/ImagePlaceholder';
+import ImageHolder from '../../assets/ImageHolder';
 import {
 	CardContainer,
 	HighlightItem,
@@ -15,7 +15,7 @@ const Examination: React.FC = () => {
 				{/* Header */}
 				<div className="">
 					<PageHeader
-						title={`🎓 Альфа — офіційний ТЕЦ та центр проведення НМТ(ЗНО), ЄВІ, ЄФВВ за кордоном`}
+						title={`🎓 Альфа- екзаменаційний центр (ТЕЦ) проведення НМТ(ЗНО), ЄВІ та ЄФВВ за кордоном`}
 					/>
 				</div>
 
@@ -43,7 +43,7 @@ const Examination: React.FC = () => {
 						</HighlightItem>
 
 						<div className="mx-auto w-2/3 mt-3">
-							<ImagePlaceholder imgSrc="/examination/1.jpg" isBig />
+							<ImageHolder imgSrc="/examination/1.jpg" isBig />
 						</div>
 
 						<DetailItem>

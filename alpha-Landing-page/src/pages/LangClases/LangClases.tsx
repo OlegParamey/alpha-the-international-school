@@ -1,5 +1,5 @@
 import type React from 'react';
-import ImagePlaceholder from '../../assets/ImagePlaceholder';
+import ImageHolder from '../../assets/ImageHolder';
 import {
 	CardContainer,
 	ContainerHeader,
@@ -27,7 +27,7 @@ const LangClases: React.FC = () => {
 					<CardContainer>
 						<ContainerHeader title={`Курси болгарської мови`} icon={'📚'} />
 
-						<ImagePlaceholder imgSrc="langClasses/1.jpg" />
+						<ImageHolder imgSrc="langClasses/1.jpg" />
 
 						<WarningBox>
 							🔹Для учнів, які бажають покращити свій рівень володіння
