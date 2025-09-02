@@ -15,9 +15,9 @@ function MenuIcon({ setIsSlideMenuOpen }: MenuIconProps) {
 			textSize="text-5xl"
 			onClick={() => setIsSlideMenuOpen(true)}
 		>
-			<div className="flex flex-row items-center gap-x-1 hover:underline">
+			<div className="flex flex-row items-center gap-x-1 hover:underline hover:italic">
 				<FaBars />
-				<p className="pb-0 h-full font-mono tracking-wide underline-offset-3 text-slate-800 text-2xl">
+				<p className="pb-0 h-full tracking-tighter underline-offset-3 text-slate-800 text-2xl">
 					МЕНЮ
 				</p>
 			</div>
@@ -28,8 +28,8 @@ function MenuIcon({ setIsSlideMenuOpen }: MenuIconProps) {
 function Logo() {
 	return (
 		<IconWithAnimationActionContainer
-			w={'w-20'}
-			h={'h-20'}
+			w={'w-16'}
+			h={'h-16'}
 			scale="scale-100 hover:scale-110 active:scale-105"
 		>
 			<NavLink to="/">

@@ -24,8 +24,8 @@ function TextLinkContainer({ text, to, end = false, onClose }: TextLinkContainer
 			className={({ isActive }) =>
 				`${handleActiveClass({
 					isActive,
-				})} w-full border-b-2 hover:border-dashed hover:bg-neutral-200 hover:text-neutral-800 
-				 duration-75 active:scale-98 max-h-12 md:max-h-14 lg:max-h-16 2xl:max-h-14 flex-1`
+				})} text-start w-full border-b-2 hover:border-dashed hover:bg-neutral-200 hover:text-neutral-800 
+				 duration-75 active:scale-98 flex-1`
 			}
 		>
 			• {text}

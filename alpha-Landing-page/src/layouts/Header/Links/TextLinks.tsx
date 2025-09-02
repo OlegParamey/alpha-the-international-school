@@ -7,7 +7,7 @@ type TextLinksProps = {
 
 const TextLinks: React.FC<TextLinksProps> = ({ onClose }) => {
 	return (
-		<div className="flex flex-grow flex-col gap-y-2 p-4 font-sans uppercase text-base md:text-lg lg:text-2xl overflow-y-auto h-screen min-h-0 shadow-inner">
+		<div className="flex flex-grow flex-col gap-y-2 p-4 font-sans uppercase text-base md:text-lg lg:text-2xl overflow-y-auto max-h-8/10 sm:max-h-9/10 shadow-inner">
 			<TextLinkContainer
 				to=""
 				end={true}

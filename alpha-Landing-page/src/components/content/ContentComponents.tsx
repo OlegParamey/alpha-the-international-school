@@ -131,7 +131,7 @@ const HighlightItem: React.FC<HighlightItemProps> = ({ icon, children }) => (
  * Green gradient call-to-action button with hover lift effect
  */
 const CTAButton: React.FC<CTAButtonProps> = ({ href, children, className = '' }) => {
-	const baseClasses = `flex  text-center justify-center mx-auto w-3/4 sm:w-2/5
+	const baseClasses = `flex text-center justify-center flex-1 mx-auto w-3/4 sm:w-2/5 sm:min-w-85
   p-2 md:px-8 md:py-4 rounded-full font-bold text-lg md:2xl xl:text-4xl transition-all
   duration-300 hover:-translate-y-1 hover:shadow-xl bg-gradient-to-r 
   from-green-500 to-emerald-500 text-white hover:from-green-400 
@@ -145,9 +145,10 @@ const CTAButton: React.FC<CTAButtonProps> = ({ href, children, className = '' })
 			className={`${baseClasses} ${className}`}
 		>
 			{children}
-			<span className="flex items-center animate-pulse text-sm sm:text-2xl mr-1">
+			{/* <span className="flex items-center animate-pulse text-sm xl:text-xl mr-1">
 				🔴
-			</span>
+			</span> */}
+			<div className=" animate-pulse size-3 xl:size-5 m-1 bg-red-600 rounded-full"></div>
 		</a>
 	);
 };
